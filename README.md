@@ -1,0 +1,2 @@
+# 1C_PrometheusExporter
+Полнофункциональное расширение позволяющее выгружать метрики в Prometheus Pushgetway
