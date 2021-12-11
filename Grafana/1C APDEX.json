@@ -1,0 +1,639 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 133,
+  "iteration": 1639052030212,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": "prometheus",
+      "description": "Довольны <= 1 c\nУдовлетворены <= 5 c",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto",
+            "minWidth": 120
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "dark-red",
+                "value": 0.4999999999
+              },
+              {
+                "color": "light-red",
+                "value": 0.5
+              },
+              {
+                "color": "#EAB839",
+                "value": 0.7
+              },
+              {
+                "color": "light-green",
+                "value": 0.85
+              },
+              {
+                "color": "dark-green",
+                "value": 0.94
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "APDEX"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percentunit"
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "color-background"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 23,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "interval": "1m",
+      "maxDataPoints": 10,
+      "options": {
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Time"
+          }
+        ]
+      },
+      "pluginVersion": "8.2.3",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"+Inf\"}[$__rate_interval])) by (exported_instance)",
+          "format": "table",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "ALL"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"1\"}[$__rate_interval])) by (exported_instance)",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "< 1 sec"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"5\"}[$__rate_interval])) by (exported_instance)",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "< 5 sec"
+        },
+        {
+          "exemplar": true,
+          "expr": "(sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"1\"}[$__rate_interval])) by (exported_instance)\n+\nsum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"5\"}[$__rate_interval])) by (exported_instance))/2\n/sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"+Inf\"}[$__rate_interval])) by (exported_instance)>= 0",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "APDEX 1C"
+        }
+      ],
+      "title": "APDEX по приложениям",
+      "transformations": [
+        {
+          "id": "merge",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {
+              "Time": 1,
+              "Value #< 1 sec": 4,
+              "Value #< 5 sec": 5,
+              "Value #ALL": 3,
+              "Value #APDEX 1C": 2,
+              "exported_instance": 0
+            },
+            "renameByName": {
+              "Value #< 1 sec": "< 1 sec",
+              "Value #< 5 sec": "< 5 sec",
+              "Value #ALL": "Всего операций",
+              "Value #APDEX 1C": "APDEX",
+              "exported_instance": "Приложение"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "Довольны <= 1 c\nУдовлетворены <= 5 c",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto",
+            "minWidth": 120
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "dark-red",
+                "value": 0
+              },
+              {
+                "color": "light-red",
+                "value": 0.5
+              },
+              {
+                "color": "#EAB839",
+                "value": 0.7
+              },
+              {
+                "color": "light-green",
+                "value": 0.85
+              },
+              {
+                "color": "dark-green",
+                "value": 0.94
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "APDEX"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percentunit"
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "color-background"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "keyoperation"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 547
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Max время операции"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "s"
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "lcd-gauge"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 23,
+        "w": 16,
+        "x": 8,
+        "y": 0
+      },
+      "id": 3,
+      "interval": "1m",
+      "maxDataPoints": 10,
+      "options": {
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "APDEX"
+          }
+        ]
+      },
+      "pluginVersion": "8.2.3",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"+Inf\"}[$__rate_interval])) by (exported_instance,keyoperation)> 0",
+          "format": "table",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "ALL"
+        },
+        {
+          "exemplar": true,
+          "expr": "(sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"1\"}[$__rate_interval])) by (exported_instance,keyoperation)\n+\nsum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"5\"}[$__rate_interval])) by (exported_instance,keyoperation))/2\n/sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"+Inf\"}[$__rate_interval])) by (exported_instance,keyoperation)>= 0",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "APDEX 1C"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"1\"}[$__rate_interval])) by (exported_instance,keyoperation)> 0",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "< 1 sec"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"5\"}[$__rate_interval])) by (exported_instance,keyoperation)> 0",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "< 5 sec"
+        },
+        {
+          "exemplar": true,
+          "expr": "histogram_quantile(0.999, sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=~\"$instance\"}[$__rate_interval])) by (exported_instance,keyoperation, le)) > 0",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "Max sec"
+        }
+      ],
+      "timeFrom": null,
+      "title": "APDEX по ключевым операциям",
+      "transformations": [
+        {
+          "id": "merge",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "exported_job": true
+            },
+            "indexByName": {
+              "Time": 2,
+              "Value #< 1 sec": 6,
+              "Value #< 5 sec": 7,
+              "Value #ALL": 5,
+              "Value #APDEX 1C": 3,
+              "Value #Max sec": 4,
+              "exported_instance": 0,
+              "keyoperation": 1
+            },
+            "renameByName": {
+              "Value #< 1 sec": "<=1 сек",
+              "Value #< 5 sec": "<=5 сек",
+              "Value #A": "Max время операции",
+              "Value #ALL": "Всего операций",
+              "Value #APDEX 1C": "APDEX",
+              "Value #Max sec": "Max время операции",
+              "exported_instance": "Приложение",
+              "exported_job": "",
+              "{exported_instance=\"Kaznacheystvo\", exported_job=\"1C\", keyoperation=\"акт к с2_ форма списка_ открытие\"}": "Max"
+            }
+          }
+        },
+        {
+          "id": "merge",
+          "options": {}
+        },
+        {
+          "id": "sortBy",
+          "options": {
+            "fields": {},
+            "sort": [
+              {
+                "field": "keyoperation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sortBy",
+          "options": {
+            "fields": {},
+            "sort": [
+              {
+                "desc": false,
+                "field": "APDEX"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sortBy",
+          "options": {
+            "fields": {},
+            "sort": [
+              {
+                "desc": true,
+                "field": "Max время операции"
+              }
+            ]
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": "prometheus",
+      "description": "Довольны <= 1 c\nУдовлетворены <= 5 c",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto",
+            "minWidth": 120
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "dark-red",
+                "value": 0
+              },
+              {
+                "color": "light-red",
+                "value": 0.5
+              },
+              {
+                "color": "#EAB839",
+                "value": 0.7
+              },
+              {
+                "color": "light-green",
+                "value": 0.85
+              },
+              {
+                "color": "dark-green",
+                "value": 0.94
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "APDEX"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percentunit"
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "color-background"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "keyoperation"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 614
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "exported_job"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 152
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 177
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "keyopertaionsourcename"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 364
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 23,
+        "w": 16,
+        "x": 8,
+        "y": 23
+      },
+      "id": 4,
+      "interval": "1m",
+      "maxDataPoints": 10,
+      "options": {
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Всего"
+          }
+        ]
+      },
+      "pluginVersion": "8.2.3",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(rate(onec_business_transaction_duration_seconds_by_key_operation_bucket{exported_instance=\"$instance\",le=\"1800\"}[$__rate_interval])) by (exported_job,exported_instance,keyoperation)> 0",
+          "format": "table",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "ALL"
+        }
+      ],
+      "title": "APDEX по ключевым операциям",
+      "transformations": [
+        {
+          "id": "merge",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Value #< 1 sec": "<=1 с",
+              "Value #< 5 sec": "<=5 с",
+              "Value #ALL": "Всего",
+              "Value #APDEX 1C": "APDEX"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 31,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": [
+            "Kaznacheystvo"
+          ],
+          "value": [
+            "Kaznacheystvo"
+          ]
+        },
+        "datasource": "prometheus",
+        "definition": "label_values(onec_business_transaction_duration_seconds_by_key_operation_sum, exported_instance)",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": true,
+        "label": "Приложение",
+        "multi": true,
+        "name": "instance",
+        "options": [],
+        "query": {
+          "query": "label_values(onec_business_transaction_duration_seconds_by_key_operation_sum, exported_instance)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "1C APDEX",
+  "uid": "TS-QWo27k",
+  "version": 20
+}

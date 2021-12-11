@@ -1,0 +1,5 @@
+scrape_configs:
+- job_name: pushgateway
+  static_configs:
+  - targets: ['pushgate:9091']
+  scrape_interval: 1s
