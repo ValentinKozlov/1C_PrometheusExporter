@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Subsystem uuid="4c4c901f-dd7b-4abe-bbfe-595df2d79e22">
+		<Properties>
+			<Name>БазоваяФункциональность</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовая функциональность</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияПодсистемБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ТехнологияСервисаВЛокальномРежиме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ТехнологияСервисаВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТехнологияСервисаСлужебныйЗапросы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ТехнологияСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.КонтрольНеразделенныхОбъектовПриЗаписиТехнологияСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.КонтрольНеразделенныхНаборовЗаписейПриЗаписиТехнологияСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МанифестКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияБТСПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ТехнологияСервисаВАвтономномРежиме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияПодсистемБТСКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.БазовыеПраваБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВитриныКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВМоделиСервисаБТСПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияПодсистемБТСКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияПодсистемБТСПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.РаботаВМоделиСервисаБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсовВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗапросыРазрешенийНаИспользованиеВнешнихРесурсовОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПрименениеРазрешенийНаИспользованиеВнешнихРесурсовВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПрименениеРазрешенийНаИспользованиеВнешнихРесурсовОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенияНаИспользованиеВнешнихРесурсовВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РазрешенияНаИспользованиеВнешнихРесурсовОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РежимыПодключенияВнешнихМодулейВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РежимыПодключенияВнешнихМодулейОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РейтингАктивностиОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаРазрешенийНаИспользованиеВнешнихРесурсовВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РежимыИспользованияИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РезультатыОбработкиЗапросовНаИспользованиеВнешнихРесурсовВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СообщенияОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВнешнийАдресУправляющегоПриложения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВнутреннийАдресМенеджераСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КаталогОбменаФайламиВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КаталогОбменаФайламиВМоделиСервисаLinux</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КлючОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КонечнаяТочкаМенеджераСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КопироватьОбластиДанныхИзЭталонной</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПредставлениеОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрефиксОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазмерБлокаПередачиФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РежимИспользованияИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СообщениеБлокировкиПриОбновленииКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЧасовойПоясОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.AgentScripts</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ApplicationManifest_1_0_0_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ApplicationPermissionsControl_1_0_0_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ApplicationPermissionsManagement_1_0_0_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ApplicationPermissionsManifest_1_0_0_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ServiceCommon</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.УправлениеПриложениями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВходВОбластьДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ОбновлениеОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ОбслуживаниеОбластейДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НастройкаРазрешенийНаИспользованиеВнешнихРесурсовВМоделиСервисаВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НастройкаРазрешенийНаИспользованиеВнешнихРесурсовВМоделиСервисаГлобальный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НастройкаРазрешенийНаИспользованиеВнешнихРесурсовВМоделиСервисаКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВБезопасномРежимеВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВБезопасномРежимеСлужебныйВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВМоделиСервисаБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВМоделиСервисаБТСПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВМоделиСервисаКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВМоделиСервисаПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаВМоделиСервисаПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СообщенияКонтрольУправленияРазрешениямиИнтерфейс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СообщенияКонтрольУправленияРазрешениямиОбработчикСообщения_1_0_0_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СообщенияКонтрольУправленияРазрешениямиРеализация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.АдминистрированиеСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.БТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.БТСКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФайлыБТСКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФайлыБТСКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ФайлыБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФайлыБТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.fresh</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

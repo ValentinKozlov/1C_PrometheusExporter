@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Subsystem uuid="c1b9061d-4410-4766-8785-cdddef3e33f5">
+		<Properties>
+			<Name>_ДемоУправлениеДоступом</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление доступом</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема Управление доступом</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоПечатьНепроведенныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоДобавлениеИзменениеЗарплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоЧтениеЗарплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture._ДемоРазделУправлениеДоступом48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоДобавлениеИзменениеНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture._ДемоРазделУправлениеДоступом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Подсистема_ДемоУправлениеДоступом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоОплатаСчетовВнешнимиПользователями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоДобавлениеИзменениеДокументовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоДобавлениеИзменениеСкладскихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоЧтениеДокументовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоЧтениеСкладскихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоДобавлениеИзменениеКассовыхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоДобавлениеИзменениеБанковскихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоЧтениеБанковскихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоЧтениеКассовыхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПрофилиГруппДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГруппыДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УправлениеДоступом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоДобавлениеИзменениеПеремещенийТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role._ДемоЧтениеПеремещенийТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription._ДемоОбновитьРеестрСкладскихДокументов</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Настройка</Subsystem>
+			<Subsystem>Использование</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

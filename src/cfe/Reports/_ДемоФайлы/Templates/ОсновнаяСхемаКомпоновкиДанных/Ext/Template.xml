@@ -1,0 +1,3006 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Зашифрован</dataPath>
+			<field>Зашифрован</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Редактирует</dataPath>
+			<field>Редактирует</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сейчас редактирует</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Пользователи</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗаема</dataPath>
+			<field>ДатаЗаема</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодписанЭП</dataPath>
+			<field>ПодписанЭП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Версия</dataPath>
+			<field>Версия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>ВладелецФайла</dcscor:choiceParameter>
+							<dcscor:value>ВладелецФайла</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Автор</dcscor:choiceParameter>
+							<dcscor:value>Автор</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВладелецФайла</dataPath>
+			<field>ВладелецФайла</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка (Владелец)</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>ОтборСсылка</dcscor:choiceParameter>
+							<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:TypeLink">
+						<dcscor:field>ПолеУдаленноеИзСхемы</dcscor:field>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Размер</dataPath>
+			<field>Размер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущаяВерсия</dataPath>
+			<field>ТекущаяВерсия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создал файл</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+							<dcscor:value>Редактирует</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">DontChange</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тип</dataPath>
+			<field>Тип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+			<availableValue>
+				<value xsi:type="xs:string">-1</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Не должно быть видно</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолеНедоступноеДляСортировки</dataPath>
+			<field>ПолеНедоступноеДляСортировки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле, недоступное для сортировки</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаМодификацииУниверсальная</dataPath>
+			<field>ДатаМодификацииУниверсальная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзменения</dataPath>
+			<field>ДатаИзменения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Файлы.Ссылка,
+	Файлы.ВладелецФайла,
+	Файлы.Редактирует,
+	Файлы.ДатаЗаема,
+	Файлы.ДатаМодификацииУниверсальная,
+	Файлы.ТекущаяВерсия,
+	ВерсииФайлов.Ссылка КАК Версия,
+	ВерсииФайлов.Комментарий,
+	ВерсииФайлов.Расширение КАК Тип,
+	ВерсииФайлов.Размер,
+	Файлы.ПодписанЭП,
+	Файлы.Зашифрован,
+	ВерсииФайлов.ДатаСоздания,
+	ДОБАВИТЬКДАТЕ(Файлы.ДатаМодификацииУниверсальная, СЕКУНДА, &amp;СекундДоМестногоВремени) КАК ДатаИзменения,
+	Файлы.Автор,
+	1 КАК Количество,
+	2 КАК ПолеНедоступноеДляСортировки
+ИЗ
+	Справочник.Файлы КАК Файлы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВерсииФайлов КАК ВерсииФайлов
+		ПО Файлы.Ссылка = ВерсииФайлов.Владелец
+{ГДЕ
+	(ДОБАВИТЬКДАТЕ(Файлы.ДатаМодификацииУниверсальная, СЕКУНДА, &amp;СекундДоМестногоВремени) МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода),
+	(ВерсииФайлов.Размер &gt;= &amp;Размер),
+	(ВерсииФайлов.Автор В (&amp;АвторыВерсий)),
+	(ВЫБОР
+			КОГДА &amp;ПоказыватьВсеВерсии = ИСТИНА
+				ТОГДА ИСТИНА
+			ИНАЧЕ Файлы.ТекущаяВерсия = ВерсииФайлов.Ссылка
+		КОНЕЦ)}</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Размер</dataPath>
+		<expression>Сумма(Размер)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отредактирован</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Размер</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Размер</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>25</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">10000</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше 10 Кб</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">100000</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше 100 Кб</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1000000</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше 1 Мб</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>ПоказыватьВсеВерсии</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показывать</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:boolean">true</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без учета версий</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:boolean">false</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С учетом версий</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Папка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Папка (Владелец)</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:TypeId>89432067-978f-4e8e-a7dc-cb87badd9341</v8:TypeId>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>АвторыВерсий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Авторы версий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВнешниеПользователи</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ГруппыВнешнихПользователей</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ГруппыПользователей</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+				<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+					<dcscor:item>
+						<dcscor:choiceParameter>Отбор.Наименование</dcscor:choiceParameter>
+						<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+						<dcscor:mode xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d7p1:LinkedValueChangeMode">Clear</dcscor:mode>
+					</dcscor:item>
+					<dcscor:item>
+						<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+						<dcscor:value>Автор</dcscor:value>
+						<dcscor:mode xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d7p1:LinkedValueChangeMode">Clear</dcscor:mode>
+					</dcscor:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item>
+				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+				<dcscor:value xsi:type="dcscor:ChoiceParameters">
+					<dcscor:item>
+						<dcscor:choiceParameter>Тест1</dcscor:choiceParameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item>
+				<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+				<dcscor:value xsi:type="dcscor:TypeLink">
+					<dcscor:field>Редактирует</dcscor:field>
+				</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<parameter>
+		<name>СекундДоМестногоВремени</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Секунд до местного времени</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<nestedSchema>
+		<name>Вложенный</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вложенный отчет</v8:content>
+			</v8:item>
+		</title>
+		<schema>
+			<dataSource>
+				<name>ИсточникДанных1</name>
+				<dataSourceType>Local</dataSourceType>
+			</dataSource>
+			<dataSet xsi:type="DataSetQuery">
+				<name>НаборДанных1</name>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Зашифрован</dataPath>
+					<field>Зашифрован</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Редактирует</dataPath>
+					<field>Редактирует</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сейчас редактирует</v8:content>
+						</v8:item>
+					</title>
+					<valueType>
+						<v8:Type xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d7p1:CatalogRef.Пользователи</v8:Type>
+					</valueType>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ДатаЗаема</dataPath>
+					<field>ДатаЗаема</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Комментарий</dataPath>
+					<field>Комментарий</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ПодписанЭП</dataPath>
+					<field>ПодписанЭП</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Версия</dataPath>
+					<field>Версия</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ДатаСоздания</dataPath>
+					<field>ДатаСоздания</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Ссылка</dataPath>
+					<field>Ссылка</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл</v8:content>
+						</v8:item>
+					</title>
+					<inputParameters>
+						<dcscor:item>
+							<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+								<dcscor:item>
+									<dcscor:choiceParameter>ВладелецФайла</dcscor:choiceParameter>
+									<dcscor:value>ВладелецФайла</dcscor:value>
+									<dcscor:mode xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:LinkedValueChangeMode">Clear</dcscor:mode>
+								</dcscor:item>
+								<dcscor:item>
+									<dcscor:choiceParameter>Отбор.Автор</dcscor:choiceParameter>
+									<dcscor:value>Автор</dcscor:value>
+									<dcscor:mode xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:LinkedValueChangeMode">Clear</dcscor:mode>
+								</dcscor:item>
+							</dcscor:value>
+						</dcscor:item>
+					</inputParameters>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ВладелецФайла</dataPath>
+					<field>ВладелецФайла</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Папка (Владелец)</v8:content>
+						</v8:item>
+					</title>
+					<inputParameters>
+						<dcscor:item>
+							<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+								<dcscor:item>
+									<dcscor:choiceParameter>ОтборСсылка</dcscor:choiceParameter>
+									<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+									<dcscor:mode xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:LinkedValueChangeMode">Clear</dcscor:mode>
+								</dcscor:item>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:TypeLink">
+								<dcscor:field>ПолеУдаленноеИзСхемы</dcscor:field>
+							</dcscor:value>
+						</dcscor:item>
+					</inputParameters>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Размер</dataPath>
+					<field>Размер</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ТекущаяВерсия</dataPath>
+					<field>ТекущаяВерсия</field>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Автор</dataPath>
+					<field>Автор</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создал файл</v8:content>
+						</v8:item>
+					</title>
+					<inputParameters>
+						<dcscor:item>
+							<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+								<dcscor:item>
+									<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+									<dcscor:value>Редактирует</dcscor:value>
+									<dcscor:mode xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d10p1:LinkedValueChangeMode">DontChange</dcscor:mode>
+								</dcscor:item>
+							</dcscor:value>
+						</dcscor:item>
+					</inputParameters>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Тип</dataPath>
+					<field>Тип</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</title>
+					<valueType>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</valueType>
+					<availableValue>
+						<value xsi:type="xs:string">-1</value>
+						<presentation xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не должно быть видно</v8:content>
+							</v8:item>
+						</presentation>
+					</availableValue>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>Количество</dataPath>
+					<field>Количество</field>
+					<title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</title>
+				</field>
+				<field xsi:type="DataSetFieldField">
+					<dataPath>ДатаМодификацииУниверсальная</dataPath>
+					<field>ДатаМодификацииУниверсальная</field>
+				</field>
+				<dataSource>ИсточникДанных1</dataSource>
+				<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Файлы.Ссылка,
+	Файлы.ВладелецФайла,
+	Файлы.Редактирует,
+	Файлы.ДатаЗаема,
+	Файлы.ДатаМодификацииУниверсальная,
+	Файлы.ТекущаяВерсия,
+	ВерсииФайлов.Ссылка КАК Версия,
+	ВерсииФайлов.Комментарий,
+	ВерсииФайлов.Расширение КАК Тип,
+	ВерсииФайлов.Размер,
+	Файлы.ПодписанЭП,
+	Файлы.Зашифрован,
+	ВерсииФайлов.ДатаСоздания,
+	Файлы.Автор,
+	1 КАК Количество
+ИЗ
+	Справочник.Файлы КАК Файлы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВерсииФайлов КАК ВерсииФайлов
+		ПО Файлы.Ссылка = ВерсииФайлов.Владелец
+{ГДЕ
+	(ВерсииФайлов.ДатаСоздания МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода),
+	(ВерсииФайлов.Размер &gt;= &amp;Размер),
+	(ВерсииФайлов.Автор В (&amp;АвторыВерсий)),
+	(ВЫБОР
+			КОГДА &amp;ПоказыватьВсеВерсии = ИСТИНА
+				ТОГДА ИСТИНА
+			ИНАЧЕ Файлы.ТекущаяВерсия = ВерсииФайлов.Ссылка
+		КОНЕЦ)}</query>
+			</dataSet>
+			<totalField>
+				<dataPath>Размер</dataPath>
+				<expression>Сумма(Размер)</expression>
+			</totalField>
+			<totalField>
+				<dataPath>Количество</dataPath>
+				<expression>Сумма(Количество)</expression>
+			</totalField>
+			<parameter>
+				<name>Период</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отредактирован</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>v8:StandardPeriod</v8:Type>
+				</valueType>
+				<value xsi:type="v8:StandardPeriod">
+					<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+					<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+					<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+				</value>
+				<useRestriction>false</useRestriction>
+			</parameter>
+			<parameter>
+				<name>НачалоПериода</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Начало периода</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+				<expression>&amp;Период.ДатаНачала</expression>
+			</parameter>
+			<parameter>
+				<name>КонецПериода</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Конец периода</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</valueType>
+				<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+				<useRestriction>true</useRestriction>
+				<expression>&amp;Период.ДатаОкончания</expression>
+			</parameter>
+			<parameter>
+				<name>Размер</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Размер</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>25</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</valueType>
+				<value xsi:type="xs:decimal">0</value>
+				<useRestriction>false</useRestriction>
+				<availableValue>
+					<value xsi:type="xs:decimal">10000</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Больше 10 Кб</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:decimal">100000</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Больше 100 Кб</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:decimal">1000000</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Больше 1 Мб</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</parameter>
+			<parameter>
+				<name>ПоказыватьВсеВерсии</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>С учетом версий</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:boolean</v8:Type>
+				</valueType>
+				<value xsi:type="xs:boolean">false</value>
+				<useRestriction>false</useRestriction>
+				<use>Always</use>
+			</parameter>
+			<parameter>
+				<name>Папка</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Папка (Владелец)</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:TypeId>89432067-978f-4e8e-a7dc-cb87badd9341</v8:TypeId>
+				</valueType>
+				<value xsi:nil="true"/>
+				<useRestriction>false</useRestriction>
+			</parameter>
+			<parameter>
+				<name>АвторыВерсий</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Авторы версий</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВнешниеПользователи</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ГруппыВнешнихПользователей</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ГруппыПользователей</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+				</valueType>
+				<useRestriction>false</useRestriction>
+				<valueListAllowed>true</valueListAllowed>
+				<inputParameters>
+					<dcscor:item>
+						<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+							<dcscor:item>
+								<dcscor:choiceParameter>Отбор.Наименование</dcscor:choiceParameter>
+								<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+								<dcscor:mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</dcscor:mode>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+								<dcscor:value>Автор</dcscor:value>
+								<dcscor:mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</dcscor:mode>
+							</dcscor:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item>
+						<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:ChoiceParameters">
+							<dcscor:item>
+								<dcscor:choiceParameter>Тест1</dcscor:choiceParameter>
+								<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+							</dcscor:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item>
+						<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:TypeLink">
+							<dcscor:field>Редактирует</dcscor:field>
+						</dcscor:value>
+					</dcscor:item>
+				</inputParameters>
+			</parameter>
+			<nestedSchema>
+				<name>Вложенный</name>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вложенный отчет</v8:content>
+					</v8:item>
+				</title>
+				<schema>
+					<dataSource>
+						<name>ИсточникДанных1</name>
+						<dataSourceType>Local</dataSourceType>
+					</dataSource>
+					<dataSet xsi:type="DataSetQuery">
+						<name>НаборДанных1</name>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Зашифрован</dataPath>
+							<field>Зашифрован</field>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Редактирует</dataPath>
+							<field>Редактирует</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сейчас редактирует</v8:content>
+								</v8:item>
+							</title>
+							<valueType>
+								<v8:Type xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d9p1:CatalogRef.Пользователи</v8:Type>
+							</valueType>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>ДатаЗаема</dataPath>
+							<field>ДатаЗаема</field>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Комментарий</dataPath>
+							<field>Комментарий</field>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>ПодписанЭП</dataPath>
+							<field>ПодписанЭП</field>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Версия</dataPath>
+							<field>Версия</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Версия</v8:content>
+								</v8:item>
+							</title>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>ДатаСоздания</dataPath>
+							<field>ДатаСоздания</field>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Ссылка</dataPath>
+							<field>Ссылка</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файл</v8:content>
+								</v8:item>
+							</title>
+							<inputParameters>
+								<dcscor:item>
+									<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+									<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+										<dcscor:item>
+											<dcscor:choiceParameter>ВладелецФайла</dcscor:choiceParameter>
+											<dcscor:value>ВладелецФайла</dcscor:value>
+											<dcscor:mode xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d12p1:LinkedValueChangeMode">Clear</dcscor:mode>
+										</dcscor:item>
+										<dcscor:item>
+											<dcscor:choiceParameter>Отбор.Автор</dcscor:choiceParameter>
+											<dcscor:value>Автор</dcscor:value>
+											<dcscor:mode xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d12p1:LinkedValueChangeMode">Clear</dcscor:mode>
+										</dcscor:item>
+									</dcscor:value>
+								</dcscor:item>
+							</inputParameters>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>ВладелецФайла</dataPath>
+							<field>ВладелецФайла</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Папка (Владелец)</v8:content>
+								</v8:item>
+							</title>
+							<inputParameters>
+								<dcscor:item>
+									<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+									<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+										<dcscor:item>
+											<dcscor:choiceParameter>ОтборСсылка</dcscor:choiceParameter>
+											<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+											<dcscor:mode xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d12p1:LinkedValueChangeMode">Clear</dcscor:mode>
+										</dcscor:item>
+									</dcscor:value>
+								</dcscor:item>
+								<dcscor:item>
+									<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+									<dcscor:value xsi:type="dcscor:TypeLink">
+										<dcscor:field>ПолеУдаленноеИзСхемы</dcscor:field>
+									</dcscor:value>
+								</dcscor:item>
+							</inputParameters>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Размер</dataPath>
+							<field>Размер</field>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>ТекущаяВерсия</dataPath>
+							<field>ТекущаяВерсия</field>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Автор</dataPath>
+							<field>Автор</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создал файл</v8:content>
+								</v8:item>
+							</title>
+							<inputParameters>
+								<dcscor:item>
+									<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+									<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+										<dcscor:item>
+											<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+											<dcscor:value>Редактирует</dcscor:value>
+											<dcscor:mode xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d12p1:LinkedValueChangeMode">DontChange</dcscor:mode>
+										</dcscor:item>
+									</dcscor:value>
+								</dcscor:item>
+							</inputParameters>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Тип</dataPath>
+							<field>Тип</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип</v8:content>
+								</v8:item>
+							</title>
+							<valueType>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>0</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</valueType>
+							<availableValue>
+								<value xsi:type="xs:string">txt</value>
+								<presentation xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Тестовый документ</v8:content>
+									</v8:item>
+								</presentation>
+							</availableValue>
+							<availableValue>
+								<value xsi:type="xs:string">docx</value>
+								<presentation xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ Word 2007</v8:content>
+									</v8:item>
+								</presentation>
+							</availableValue>
+							<availableValue>
+								<value xsi:type="xs:string">png</value>
+								<presentation xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Картинка PNG</v8:content>
+									</v8:item>
+								</presentation>
+							</availableValue>
+							<availableValue>
+								<value xsi:type="xs:string">pdf</value>
+								<presentation xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ Adobe PDF</v8:content>
+									</v8:item>
+								</presentation>
+							</availableValue>
+							<availableValue>
+								<value xsi:type="xs:string">-1</value>
+								<presentation xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не должно быть видно</v8:content>
+									</v8:item>
+								</presentation>
+							</availableValue>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>Количество</dataPath>
+							<field>Количество</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество</v8:content>
+								</v8:item>
+							</title>
+						</field>
+						<field xsi:type="DataSetFieldField">
+							<dataPath>ДатаСоздания1</dataPath>
+							<field>ДатаСоздания1</field>
+							<title xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата создания1</v8:content>
+								</v8:item>
+							</title>
+						</field>
+						<dataSource>ИсточникДанных1</dataSource>
+						<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Файлы.Ссылка,
+	Файлы.ВладелецФайла,
+	Файлы.Редактирует,
+	Файлы.ДатаЗаема,
+	Файлы.ТекущаяВерсия.ДатаСоздания КАК ДатаСоздания,
+	Файлы.ТекущаяВерсия,
+	ВерсииФайлов.Ссылка КАК Версия,
+	ВерсииФайлов.Комментарий,
+	ВерсииФайлов.Расширение КАК Тип,
+	ВерсииФайлов.Размер,
+	Файлы.ПодписанЭП,
+	Файлы.Зашифрован,
+	ВерсииФайлов.ДатаСоздания,
+	Файлы.Автор,
+	1 КАК Количество
+ИЗ
+	Справочник.Файлы КАК Файлы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВерсииФайлов КАК ВерсииФайлов
+		ПО Файлы.Ссылка = ВерсииФайлов.Владелец
+{ГДЕ
+	(ВерсииФайлов.ДатаСоздания МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода),
+	(ВерсииФайлов.Размер &gt;= &amp;Размер),
+	(ВерсииФайлов.Автор В (&amp;АвторыВерсий)),
+	(ВЫБОР
+			КОГДА &amp;ПоказыватьВсеВерсии = ИСТИНА
+				ТОГДА ИСТИНА
+			ИНАЧЕ Файлы.ТекущаяВерсия = ВерсииФайлов.Ссылка
+		КОНЕЦ)}</query>
+					</dataSet>
+					<totalField>
+						<dataPath>Размер</dataPath>
+						<expression>Сумма(Размер)</expression>
+					</totalField>
+					<totalField>
+						<dataPath>Количество</dataPath>
+						<expression>Сумма(Количество)</expression>
+					</totalField>
+					<parameter>
+						<name>Период</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отредактирован</v8:content>
+							</v8:item>
+						</title>
+						<valueType>
+							<v8:Type>v8:StandardPeriod</v8:Type>
+						</valueType>
+						<value xsi:type="v8:StandardPeriod">
+							<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+							<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+							<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+						</value>
+						<useRestriction>false</useRestriction>
+					</parameter>
+					<parameter>
+						<name>НачалоПериода</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Начало периода</v8:content>
+							</v8:item>
+						</title>
+						<valueType>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>DateTime</v8:DateFractions>
+							</v8:DateQualifiers>
+						</valueType>
+						<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+						<useRestriction>true</useRestriction>
+						<expression>&amp;Период.ДатаНачала</expression>
+					</parameter>
+					<parameter>
+						<name>КонецПериода</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Конец периода</v8:content>
+							</v8:item>
+						</title>
+						<valueType>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>DateTime</v8:DateFractions>
+							</v8:DateQualifiers>
+						</valueType>
+						<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+						<useRestriction>true</useRestriction>
+						<expression>&amp;Период.ДатаОкончания</expression>
+					</parameter>
+					<parameter>
+						<name>Размер</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Размер</v8:content>
+							</v8:item>
+						</title>
+						<valueType>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>25</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</valueType>
+						<value xsi:type="xs:decimal">0</value>
+						<useRestriction>false</useRestriction>
+						<availableValue>
+							<value xsi:type="xs:decimal">10000</value>
+							<presentation xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Больше 10 Кб</v8:content>
+								</v8:item>
+							</presentation>
+						</availableValue>
+						<availableValue>
+							<value xsi:type="xs:decimal">100000</value>
+							<presentation xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Больше 100 Кб</v8:content>
+								</v8:item>
+							</presentation>
+						</availableValue>
+						<availableValue>
+							<value xsi:type="xs:decimal">1000000</value>
+							<presentation xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Больше 1 Мб</v8:content>
+								</v8:item>
+							</presentation>
+						</availableValue>
+					</parameter>
+					<parameter>
+						<name>ПоказыватьВсеВерсии</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С учетом версий</v8:content>
+							</v8:item>
+						</title>
+						<valueType>
+							<v8:Type>xs:boolean</v8:Type>
+						</valueType>
+						<value xsi:type="xs:boolean">false</value>
+						<useRestriction>false</useRestriction>
+						<use>Always</use>
+					</parameter>
+					<parameter>
+						<name>Папка</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Папка (Владелец)</v8:content>
+							</v8:item>
+						</title>
+						<valueType>
+							<v8:TypeId>89432067-978f-4e8e-a7dc-cb87badd9341</v8:TypeId>
+						</valueType>
+						<value xsi:nil="true"/>
+						<useRestriction>false</useRestriction>
+					</parameter>
+					<parameter>
+						<name>АвторыВерсий</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Авторы версий</v8:content>
+							</v8:item>
+						</title>
+						<valueType>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.ВнешниеПользователи</v8:Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.ГруппыВнешнихПользователей</v8:Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.ГруппыПользователей</v8:Type>
+							<v8:Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.Пользователи</v8:Type>
+						</valueType>
+						<useRestriction>false</useRestriction>
+						<valueListAllowed>true</valueListAllowed>
+						<inputParameters>
+							<dcscor:item>
+								<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+								<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+									<dcscor:item>
+										<dcscor:choiceParameter>Отбор.Наименование</dcscor:choiceParameter>
+										<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+										<dcscor:mode xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d11p1:LinkedValueChangeMode">Clear</dcscor:mode>
+									</dcscor:item>
+									<dcscor:item>
+										<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+										<dcscor:value>Автор</dcscor:value>
+										<dcscor:mode xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d11p1:LinkedValueChangeMode">Clear</dcscor:mode>
+									</dcscor:item>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+								<dcscor:value xsi:type="dcscor:ChoiceParameters">
+									<dcscor:item>
+										<dcscor:choiceParameter>Тест1</dcscor:choiceParameter>
+										<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+									</dcscor:item>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+								<dcscor:value xsi:type="dcscor:TypeLink">
+									<dcscor:field>Редактирует</dcscor:field>
+								</dcscor:value>
+							</dcscor:item>
+						</inputParameters>
+					</parameter>
+					<nestedSchema>
+						<name>Вложенный</name>
+						<title xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вложенный</v8:content>
+							</v8:item>
+						</title>
+						<schema>
+							<dataSource>
+								<name>ИсточникДанных1</name>
+								<dataSourceType>Local</dataSourceType>
+							</dataSource>
+							<dataSet xsi:type="DataSetQuery">
+								<name>НаборДанных1</name>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Зашифрован</dataPath>
+									<field>Зашифрован</field>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Редактирует</dataPath>
+									<field>Редактирует</field>
+									<title xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сейчас редактирует</v8:content>
+										</v8:item>
+									</title>
+									<valueType>
+										<v8:Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Пользователи</v8:Type>
+									</valueType>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>ДатаЗаема</dataPath>
+									<field>ДатаЗаема</field>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Комментарий</dataPath>
+									<field>Комментарий</field>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>ПодписанЭП</dataPath>
+									<field>ПодписанЭП</field>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Версия</dataPath>
+									<field>Версия</field>
+									<title xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия</v8:content>
+										</v8:item>
+									</title>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>ДатаСоздания</dataPath>
+									<field>ДатаСоздания</field>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Ссылка</dataPath>
+									<field>Ссылка</field>
+									<title xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файл</v8:content>
+										</v8:item>
+									</title>
+									<inputParameters>
+										<dcscor:item>
+											<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+											<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+												<dcscor:item>
+													<dcscor:choiceParameter>ВладелецФайла</dcscor:choiceParameter>
+													<dcscor:value>ВладелецФайла</dcscor:value>
+													<dcscor:mode xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d14p1:LinkedValueChangeMode">Clear</dcscor:mode>
+												</dcscor:item>
+												<dcscor:item>
+													<dcscor:choiceParameter>Отбор.Автор</dcscor:choiceParameter>
+													<dcscor:value>Автор</dcscor:value>
+													<dcscor:mode xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d14p1:LinkedValueChangeMode">Clear</dcscor:mode>
+												</dcscor:item>
+											</dcscor:value>
+										</dcscor:item>
+									</inputParameters>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>ВладелецФайла</dataPath>
+									<field>ВладелецФайла</field>
+									<title xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка (Владелец)</v8:content>
+										</v8:item>
+									</title>
+									<inputParameters>
+										<dcscor:item>
+											<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+											<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+												<dcscor:item>
+													<dcscor:choiceParameter>ОтборСсылка</dcscor:choiceParameter>
+													<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+													<dcscor:mode xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d14p1:LinkedValueChangeMode">Clear</dcscor:mode>
+												</dcscor:item>
+											</dcscor:value>
+										</dcscor:item>
+										<dcscor:item>
+											<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+											<dcscor:value xsi:type="dcscor:TypeLink">
+												<dcscor:field>ПолеУдаленноеИзСхемы</dcscor:field>
+											</dcscor:value>
+										</dcscor:item>
+									</inputParameters>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Размер</dataPath>
+									<field>Размер</field>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>ТекущаяВерсия</dataPath>
+									<field>ТекущаяВерсия</field>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Автор</dataPath>
+									<field>Автор</field>
+									<title xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создал файл</v8:content>
+										</v8:item>
+									</title>
+									<inputParameters>
+										<dcscor:item>
+											<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+											<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+												<dcscor:item>
+													<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+													<dcscor:value>Редактирует</dcscor:value>
+													<dcscor:mode xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d14p1:LinkedValueChangeMode">DontChange</dcscor:mode>
+												</dcscor:item>
+											</dcscor:value>
+										</dcscor:item>
+									</inputParameters>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Тип</dataPath>
+									<field>Тип</field>
+									<title xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип</v8:content>
+										</v8:item>
+									</title>
+									<valueType>
+										<v8:Type>xs:string</v8:Type>
+										<v8:StringQualifiers>
+											<v8:Length>0</v8:Length>
+											<v8:AllowedLength>Variable</v8:AllowedLength>
+										</v8:StringQualifiers>
+									</valueType>
+									<availableValue>
+										<value xsi:type="xs:string">-1</value>
+										<presentation xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Не должно быть видно</v8:content>
+											</v8:item>
+										</presentation>
+									</availableValue>
+								</field>
+								<field xsi:type="DataSetFieldField">
+									<dataPath>Количество</dataPath>
+									<field>Количество</field>
+									<title xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество</v8:content>
+										</v8:item>
+									</title>
+								</field>
+								<dataSource>ИсточникДанных1</dataSource>
+								<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Файлы.Ссылка,
+	Файлы.ВладелецФайла,
+	Файлы.Редактирует,
+	Файлы.ДатаЗаема,
+	Файлы.ТекущаяВерсия,
+	ВерсииФайлов.Ссылка КАК Версия,
+	ВерсииФайлов.Комментарий,
+	ВерсииФайлов.Расширение КАК Тип,
+	ВерсииФайлов.Размер,
+	Файлы.ПодписанЭП,
+	Файлы.Зашифрован,
+	ВерсииФайлов.ДатаСоздания,
+	Файлы.Автор,
+	1 КАК Количество
+ИЗ
+	Справочник.Файлы КАК Файлы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВерсииФайлов КАК ВерсииФайлов
+		ПО Файлы.Ссылка = ВерсииФайлов.Владелец
+{ГДЕ
+	(ВерсииФайлов.ДатаСоздания МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода),
+	(ВерсииФайлов.Размер &gt;= &amp;Размер),
+	(ВерсииФайлов.Автор В (&amp;АвторыВерсий)),
+	(ВЫБОР
+			КОГДА &amp;ПоказыватьВсеВерсии = ИСТИНА
+				ТОГДА ИСТИНА
+			ИНАЧЕ Файлы.ТекущаяВерсия = ВерсииФайлов.Ссылка
+		КОНЕЦ)}</query>
+							</dataSet>
+							<totalField>
+								<dataPath>Размер</dataPath>
+								<expression>Сумма(Размер)</expression>
+							</totalField>
+							<totalField>
+								<dataPath>Количество</dataPath>
+								<expression>Сумма(Количество)</expression>
+							</totalField>
+							<parameter>
+								<name>Период</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отредактирован</v8:content>
+									</v8:item>
+								</title>
+								<valueType>
+									<v8:Type>v8:StandardPeriod</v8:Type>
+								</valueType>
+								<value xsi:type="v8:StandardPeriod">
+									<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+									<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+									<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+								</value>
+								<useRestriction>false</useRestriction>
+							</parameter>
+							<parameter>
+								<name>НачалоПериода</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Начало периода</v8:content>
+									</v8:item>
+								</title>
+								<valueType>
+									<v8:Type>xs:dateTime</v8:Type>
+									<v8:DateQualifiers>
+										<v8:DateFractions>DateTime</v8:DateFractions>
+									</v8:DateQualifiers>
+								</valueType>
+								<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+								<useRestriction>true</useRestriction>
+								<expression>&amp;Период.ДатаНачала</expression>
+							</parameter>
+							<parameter>
+								<name>КонецПериода</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Конец периода</v8:content>
+									</v8:item>
+								</title>
+								<valueType>
+									<v8:Type>xs:dateTime</v8:Type>
+									<v8:DateQualifiers>
+										<v8:DateFractions>DateTime</v8:DateFractions>
+									</v8:DateQualifiers>
+								</valueType>
+								<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+								<useRestriction>true</useRestriction>
+								<expression>&amp;Период.ДатаОкончания</expression>
+							</parameter>
+							<parameter>
+								<name>Размер</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Размер</v8:content>
+									</v8:item>
+								</title>
+								<valueType>
+									<v8:Type>xs:decimal</v8:Type>
+									<v8:NumberQualifiers>
+										<v8:Digits>25</v8:Digits>
+										<v8:FractionDigits>0</v8:FractionDigits>
+										<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+									</v8:NumberQualifiers>
+								</valueType>
+								<value xsi:type="xs:decimal">0</value>
+								<useRestriction>false</useRestriction>
+								<availableValue>
+									<value xsi:type="xs:decimal">10000</value>
+									<presentation xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Больше 10 Кб</v8:content>
+										</v8:item>
+									</presentation>
+								</availableValue>
+								<availableValue>
+									<value xsi:type="xs:decimal">100000</value>
+									<presentation xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Больше 100 Кб</v8:content>
+										</v8:item>
+									</presentation>
+								</availableValue>
+								<availableValue>
+									<value xsi:type="xs:decimal">1000000</value>
+									<presentation xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Больше 1 Мб</v8:content>
+										</v8:item>
+									</presentation>
+								</availableValue>
+							</parameter>
+							<parameter>
+								<name>ПоказыватьВсеВерсии</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>С учетом версий</v8:content>
+									</v8:item>
+								</title>
+								<valueType>
+									<v8:Type>xs:boolean</v8:Type>
+								</valueType>
+								<value xsi:type="xs:boolean">false</value>
+								<useRestriction>false</useRestriction>
+								<use>Always</use>
+							</parameter>
+							<parameter>
+								<name>Папка</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Папка (Владелец)</v8:content>
+									</v8:item>
+								</title>
+								<valueType>
+									<v8:TypeId>89432067-978f-4e8e-a7dc-cb87badd9341</v8:TypeId>
+								</valueType>
+								<value xsi:nil="true"/>
+								<useRestriction>false</useRestriction>
+							</parameter>
+							<parameter>
+								<name>АвторыВерсий</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Авторы версий</v8:content>
+									</v8:item>
+								</title>
+								<valueType>
+									<v8:Type xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d10p1:CatalogRef.ВнешниеПользователи</v8:Type>
+									<v8:Type xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d10p1:CatalogRef.ГруппыВнешнихПользователей</v8:Type>
+									<v8:Type xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d10p1:CatalogRef.ГруппыПользователей</v8:Type>
+									<v8:Type xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d10p1:CatalogRef.Пользователи</v8:Type>
+								</valueType>
+								<useRestriction>false</useRestriction>
+								<valueListAllowed>true</valueListAllowed>
+								<inputParameters>
+									<dcscor:item>
+										<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+										<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+											<dcscor:item>
+												<dcscor:choiceParameter>Отбор.Наименование</dcscor:choiceParameter>
+												<dcscor:value>ПолеУдаленноеИзСхемы</dcscor:value>
+												<dcscor:mode xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d13p1:LinkedValueChangeMode">Clear</dcscor:mode>
+											</dcscor:item>
+											<dcscor:item>
+												<dcscor:choiceParameter>Отбор.Ссылка</dcscor:choiceParameter>
+												<dcscor:value>Автор</dcscor:value>
+												<dcscor:mode xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d13p1:LinkedValueChangeMode">Clear</dcscor:mode>
+											</dcscor:item>
+										</dcscor:value>
+									</dcscor:item>
+									<dcscor:item>
+										<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+										<dcscor:value xsi:type="dcscor:ChoiceParameters">
+											<dcscor:item>
+												<dcscor:choiceParameter>Тест1</dcscor:choiceParameter>
+												<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+											</dcscor:item>
+										</dcscor:value>
+									</dcscor:item>
+									<dcscor:item>
+										<dcscor:parameter>СвязьПоТипу</dcscor:parameter>
+										<dcscor:value xsi:type="dcscor:TypeLink">
+											<dcscor:field>Редактирует</dcscor:field>
+										</dcscor:value>
+									</dcscor:item>
+								</inputParameters>
+							</parameter>
+							<nestedSchema>
+								<name>Вложенный</name>
+								<title xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вложенный</v8:content>
+									</v8:item>
+								</title>
+								<schema>
+									<dataSource>
+										<name>ИсточникДанных1</name>
+										<dataSourceType>Local</dataSourceType>
+									</dataSource>
+									<dataSet xsi:type="DataSetQuery">
+										<name>НаборДанных1</name>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Зашифрован</dataPath>
+											<field>Зашифрован</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Редактирует</dataPath>
+											<field>Редактирует</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>ДатаЗаема</dataPath>
+											<field>ДатаЗаема</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Комментарий</dataPath>
+											<field>Комментарий</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>ПодписанЭП</dataPath>
+											<field>ПодписанЭП</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Версия</dataPath>
+											<field>Версия</field>
+											<title xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Версия</v8:content>
+												</v8:item>
+											</title>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>ДатаСоздания</dataPath>
+											<field>ДатаСоздания</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Ссылка</dataPath>
+											<field>Ссылка</field>
+											<title xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Файл</v8:content>
+												</v8:item>
+											</title>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>ВладелецФайла</dataPath>
+											<field>ВладелецФайла</field>
+											<title xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Папка (Владелец)</v8:content>
+												</v8:item>
+											</title>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Размер</dataPath>
+											<field>Размер</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>ТекущаяВерсия</dataPath>
+											<field>ТекущаяВерсия</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Автор</dataPath>
+											<field>Автор</field>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Тип</dataPath>
+											<field>Тип</field>
+											<title xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип</v8:content>
+												</v8:item>
+											</title>
+										</field>
+										<field xsi:type="DataSetFieldField">
+											<dataPath>Количество</dataPath>
+											<field>Количество</field>
+											<title xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество</v8:content>
+												</v8:item>
+											</title>
+										</field>
+										<dataSource>ИсточникДанных1</dataSource>
+										<query>ВЫБРАТЬ
+	Файлы.Ссылка,
+	Файлы.ВладелецФайла,
+	Файлы.Редактирует,
+	Файлы.ДатаЗаема,
+	Файлы.ТекущаяВерсия,
+	ВерсииФайлов.Ссылка КАК Версия,
+	ВерсииФайлов.Комментарий,
+	ВерсииФайлов.Расширение КАК Тип,
+	ВерсииФайлов.Размер,
+	Файлы.ПодписанЭП,
+	Файлы.Зашифрован,
+	ВерсииФайлов.ДатаСоздания,
+	ВерсииФайлов.Автор,
+	1 КАК Количество
+ИЗ
+	Справочник.Файлы КАК Файлы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВерсииФайлов КАК ВерсииФайлов
+		ПО Файлы.Ссылка = ВерсииФайлов.Владелец
+{ГДЕ
+	(ВерсииФайлов.ДатаСоздания МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода),
+	(ВерсииФайлов.Размер &gt;= &amp;Размер),
+	(ВЫБОР
+			КОГДА &amp;ПоказыватьВсеВерсии = ИСТИНА
+				ТОГДА ИСТИНА
+			ИНАЧЕ Файлы.ТекущаяВерсия = ВерсииФайлов.Ссылка
+		КОНЕЦ)}</query>
+									</dataSet>
+									<totalField>
+										<dataPath>Размер</dataPath>
+										<expression>Сумма(Размер)</expression>
+									</totalField>
+									<totalField>
+										<dataPath>Количество</dataPath>
+										<expression>Сумма(Количество)</expression>
+									</totalField>
+									<parameter>
+										<name>Период</name>
+										<title xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отредактирован</v8:content>
+											</v8:item>
+										</title>
+										<valueType>
+											<v8:Type>v8:StandardPeriod</v8:Type>
+										</valueType>
+										<value xsi:type="v8:StandardPeriod">
+											<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+											<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+											<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+										</value>
+										<useRestriction>false</useRestriction>
+									</parameter>
+									<parameter>
+										<name>НачалоПериода</name>
+										<title xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Начало периода</v8:content>
+											</v8:item>
+										</title>
+										<valueType>
+											<v8:Type>xs:dateTime</v8:Type>
+											<v8:DateQualifiers>
+												<v8:DateFractions>DateTime</v8:DateFractions>
+											</v8:DateQualifiers>
+										</valueType>
+										<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+										<useRestriction>true</useRestriction>
+										<expression>&amp;Период.ДатаНачала</expression>
+									</parameter>
+									<parameter>
+										<name>КонецПериода</name>
+										<title xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Конец периода</v8:content>
+											</v8:item>
+										</title>
+										<valueType>
+											<v8:Type>xs:dateTime</v8:Type>
+											<v8:DateQualifiers>
+												<v8:DateFractions>DateTime</v8:DateFractions>
+											</v8:DateQualifiers>
+										</valueType>
+										<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+										<useRestriction>true</useRestriction>
+										<expression>&amp;Период.ДатаОкончания</expression>
+									</parameter>
+									<parameter>
+										<name>Размер</name>
+										<title xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Размер</v8:content>
+											</v8:item>
+										</title>
+										<valueType>
+											<v8:Type>xs:decimal</v8:Type>
+											<v8:NumberQualifiers>
+												<v8:Digits>25</v8:Digits>
+												<v8:FractionDigits>0</v8:FractionDigits>
+												<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+											</v8:NumberQualifiers>
+										</valueType>
+										<value xsi:type="xs:decimal">0</value>
+										<useRestriction>false</useRestriction>
+										<availableValue>
+											<value xsi:type="xs:decimal">10000</value>
+											<presentation xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Больше 10 Кб</v8:content>
+												</v8:item>
+											</presentation>
+										</availableValue>
+										<availableValue>
+											<value xsi:type="xs:decimal">100000</value>
+											<presentation xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Больше 100 Кб</v8:content>
+												</v8:item>
+											</presentation>
+										</availableValue>
+										<availableValue>
+											<value xsi:type="xs:decimal">1000000</value>
+											<presentation xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Больше 1 Мб</v8:content>
+												</v8:item>
+											</presentation>
+										</availableValue>
+									</parameter>
+									<parameter>
+										<name>ПоказыватьВсеВерсии</name>
+										<title xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>С учетом версий</v8:content>
+											</v8:item>
+										</title>
+										<valueType>
+											<v8:Type>xs:boolean</v8:Type>
+										</valueType>
+										<value xsi:type="xs:boolean">false</value>
+										<useRestriction>false</useRestriction>
+										<use>Always</use>
+									</parameter>
+									<settingsVariant>
+										<dcsset:name>Основной</dcsset:name>
+										<dcsset:presentation xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Основной</v8:content>
+											</v8:item>
+										</dcsset:presentation>
+										<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+									</settingsVariant>
+								</schema>
+								<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+							</nestedSchema>
+							<settingsVariant>
+								<dcsset:name>Вариант1</dcsset:name>
+								<dcsset:presentation xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вариант1</v8:content>
+									</v8:item>
+								</dcsset:presentation>
+								<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+									<dcsset:filter>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">Тип</dcsset:left>
+											<dcsset:comparisonType>Equal</dcsset:comparisonType>
+											<dcsset:right xsi:type="xs:string">-1</dcsset:right>
+										</dcsset:item>
+									</dcsset:filter>
+								</dcsset:settings>
+							</settingsVariant>
+						</schema>
+						<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+					</nestedSchema>
+					<settingsVariant>
+						<dcsset:name>Вариант1</dcsset:name>
+						<dcsset:presentation xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вариант1</v8:content>
+							</v8:item>
+						</dcsset:presentation>
+						<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+					</settingsVariant>
+				</schema>
+				<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+			</nestedSchema>
+			<settingsVariant>
+				<dcsset:name>Вариант1</dcsset:name>
+				<dcsset:presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вариант1</v8:content>
+					</v8:item>
+				</dcsset:presentation>
+				<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+			</settingsVariant>
+		</schema>
+		<settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</nestedSchema>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Демо: Список файлов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Тип</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Редактирует</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ТекущаяВерсия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Версия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаЗаема</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаСоздания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаМодификацииУниверсальная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Зашифрован</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ВладелецФайла</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПодписанЭП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Размер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПолеНедоступноеДляСортировки</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>e336b1b1-7c49-4a66-8dfc-39d9caf115c1</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Редактирует</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только занятые для редактирования</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>b3d05f5e-381e-4bab-bc1d-c73027a181df</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Тип</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>d1dbc10e-f997-4ea6-9cd5-aba62109e440</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВладелецФайла</dcsset:left>
+					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e0061d8f-541d-4ff3-88c2-35da25d4efd5</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Ссылка</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>1f80a8f9-d93e-4d20-b427-e4ebcd17ac06</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>2012-01-01T00:00:00</v8:startDate>
+						<v8:endDate>2012-12-31T23:59:59</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>98fffec8-577b-4a10-a7ef-080d45ee95d6</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПоказыватьВсеВерсии</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>dbb20dd0-2158-4543-9150-128707a56e33</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВладелецФайла</dcsset:field>
+						<dcsset:groupType>Hierarchy</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПоРазмеру</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Демо: 10 самых больших файлов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Тип</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Размер</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>e336b1b1-7c49-4a66-8dfc-39d9caf115c1</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Редактирует</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только занятые для редактирования</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>2015-12-31T23:59:59</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>0147f83b-5c5e-43f9-99f3-19e0343cc7fd</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размер</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10000</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>3a3abc72-c1df-4dd1-a65b-af5271bb9bcd</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПоказыватьВсеВерсии</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:userSettingID>5464c42e-c922-4857-9d9d-caa0f26eb9c1</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Размер</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>dbb20dd0-2158-4543-9150-128707a56e33</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВладелецФайла</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>КоличествоЗаписей</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Ссылка</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>КоличествоЗаписей</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Размер</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">Column3D</dcscor:value>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:ChartLabelType">Percent</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ОтображатьТаблицуДанных</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.РасположениеЛегенды</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionChartLegendPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>406d88de-9e14-4c8a-bf75-e6f241fc50b0</dcsset:userSettingID>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПоТипам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Демо: Типы файлов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>e336b1b1-7c49-4a66-8dfc-39d9caf115c1</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Редактирует</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="xs:string">Только занятые для редактирования</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>dbb20dd0-2158-4543-9150-128707a56e33</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemNestedObject">
+				<dcsset:objectID>Вложенный</dcsset:objectID>
+				<dcsset:settings>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Тип</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Ссылка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Тип</dcsset:left>
+							<dcsset:comparisonType>InList</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:ValueListType">
+								<v8:valueType/>
+								<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+							</dcsset:right>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>ec928459-22f6-4b38-9f36-58afc0952c1a</dcsset:userSettingID>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:dataParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Период</dcscor:parameter>
+							<dcscor:value xsi:type="v8:StandardPeriod">
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</dcscor:value>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>7d2acd13-dc4e-42c0-8d88-d3e6e9c20b06</dcsset:userSettingID>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Размер</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>2d10fbd8-d793-474d-8666-1ae6d2e8661f</dcsset:userSettingID>
+						</dcscor:item>
+					</dcsset:dataParameters>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Тип</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:item xsi:type="dcsset:StructureItemChart">
+						<dcsset:series>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Тип</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:series>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Количество</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:outputParameters>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:ChartType">Pie</dcscor:value>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:ChartLabelType">SeriesPercent</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ТипДиаграммы.РасположениеЛегенды</dcscor:parameter>
+									<dcscor:value xsi:type="dcsset:DataCompositionChartLegendPlacement">None</dcscor:value>
+								</dcscor:item>
+							</dcscor:item>
+						</dcsset:outputParameters>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Тип</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>Количество</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>bf214553-044e-4caf-90dd-500cd938e0d1</dcsset:userSettingID>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:settings>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПоВерсиям</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Демо: Версии файлов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Версия</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаСоздания</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Together</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Размер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>b4dbf432-1217-4e43-b0c8-249c7474c0ae</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Версия</dcsset:left>
+					<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:Field">ТекущаяВерсия</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только неактивные версии</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>a73fa432-c30c-461c-8c87-d6247b17b231</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Размер</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>e69014e8-1dba-4a69-8e9f-45e373e479c0</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПоказыватьВсеВерсии</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВладелецФайла</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаСоздания</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f5b3d460-43e9-4c6d-9467-94d03a1669cb</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Версия</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Версия</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ТекущаяВерсия</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:РезультатУспехЦвет</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="style:SmallTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Отступ</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подсвечивать активные версии</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>2abccdca-7ad0-4500-ad41-149e673683bb</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВладелецФайла</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Вспомогательный</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Демо: Вспомогательный</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Версия</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаСоздания</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Together</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Зашифрован</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПодписанЭП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Размер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>b4dbf432-1217-4e43-b0c8-249c7474c0ae</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Автор</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:userSettingID>12d22a97-7de0-4a61-8546-d668717527a0</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Редактирует</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>6a1ff498-636c-402b-8a14-180b4269c60a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВладелецФайла</dcsset:left>
+					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>520ef0e2-fdaf-437f-af5c-ac90019eabde</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemGroup">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:groupType>AndGroup</dcsset:groupType>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДатаЗаема</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:dateTime">2015-01-01T00:00:00</dcsset:right>
+						<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Редактирует</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					</dcsset:item>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>f0c5e1b6-a7d8-4a97-a391-fa251db17ed5</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="xs:string">Только занятые до 2015 г.</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Тип</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>6ef84254-b20b-42de-bf5c-bad833b85475</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Версия</dcsset:left>
+					<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:Field">ТекущаяВерсия</dcsset:right>
+					<dcsset:presentation xsi:type="xs:string">Только неактивные версии</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>a73fa432-c30c-461c-8c87-d6247b17b231</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="xs:string">Только неактивные версии</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f801037b-30af-491e-9d6b-0bc813f70472</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>991c5303-0240-418e-bdb0-6a313075559d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПоказыватьВсеВерсии</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>АвторыВерсий</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>71e0c0fd-9b21-43e4-830b-653942827730</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВладелецФайла</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаСоздания</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f5b3d460-43e9-4c6d-9467-94d03a1669cb</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Версия</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Версия</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ТекущаяВерсия</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="style:SmallTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Отступ</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Выделять активные версии</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>2abccdca-7ad0-4500-ad41-149e673683bb</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Справка по документам</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>6b8d0837-8120-45a2-8b11-8c7b4ca87451</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>1d03a29a-277d-4f28-9f26-131d47b8cd80</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВладелецФайла</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:conditionalAppearance>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Зашифрован</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ДобавленныйРеквизитФон</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>74298938-b967-4b4f-991d-8fc8073a4dc0</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:conditionalAppearance>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>d03f2024-a63e-49b6-8f9d-52ecdde9297b</dcsset:userSettingID>
+				<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Автор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">По авторам</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>d051c8f3-2d6c-4a99-bd33-b3dbef865a90</dcsset:userSettingID>
+			</dcsset:item>
+			<dcsset:additionalProperties>
+				<v8:Property name="ВариантНаименование">
+					<v8:Value xsi:type="xs:string">Демо: Версии файлов (подробно)</v8:Value>
+				</v8:Property>
+			</dcsset:additionalProperties>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Subsystem uuid="4bd401b9-7e40-4847-85df-ab45fba08d40">
+		<Properties>
+			<Name>ВыгрузкаЗагрузкаДанных</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка загрузка данных</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанныхХранилищЗначений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанныхСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерКонтейнера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанныхСлужебныйСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.DataArtefacts_ValueStorages_1_0_0_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанныхГраницПоследовательностей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаСовместноРазделенныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаНеразделенныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаПредопределенныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаПользователейИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанныхПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЧтенияДанныхИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаписиДанныхИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаменыСсылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхГрафЗависимостейСловарейСопоставленияСсылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанныхХранилищЗначенийПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаНеразделенныхДанныхПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаПредопределенныхДанныхПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаСовместноРазделенныхДанныхПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерВыгрузкиДанныхИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаписиПересоздаваемыхСсылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхПотокЗаписиСопоставляемыхСсылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерЗагрузкиДанныхИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерПересозданияСсылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерСопоставленияСсылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаНеразделенныхПредопределенныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерОбработчиковВыгрузкиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерОбработчиковЗагрузкиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаДанныхУправлениеИтогами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерВыгрузкиНастроекПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаЗагрузкаДанныхМенеджерЗагрузкиНастроекПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаИзбранногоРаботыПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.DataArtefacts_UserWorkFavorites_1_0_0_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВыгрузкаЗагрузкаУзловПлановОбменов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ZipАрхивы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

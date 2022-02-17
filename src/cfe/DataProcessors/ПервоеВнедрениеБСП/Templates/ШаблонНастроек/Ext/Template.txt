@@ -1,0 +1,107 @@
+﻿<Settings xmlns="http://v8.1c.ru/8.3/config/merge/settings" version="1.0" platformVersion="8.3.9">
+	<SecondConfiguration>
+		<Name>БиблиотекаСтандартныхПодсистем</Name>
+		<Version/>
+		<Vendor>Фирма "1С"</Vendor>
+	</SecondConfiguration >
+	<Objects>
+		<Configuration>
+			<MergeRule>DoNotMerge</MergeRule>
+			<Properties>
+				<Property name="Синоним">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ОсновныеРоли">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+				<Property name="Поставщик">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="Версия">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="АдресКаталогаОбновлений">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="МодульУправляемогоПриложения">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+				<Property name="МодульСеанса">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+				<Property name="МодульВнешнегоСоединения">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+				<Property name="МодульОбычногоПриложения">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+				<Property name="ВключатьСправкуВСодержание">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="Справка">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ИспользоватьУправляемыеФормыВОбычномПриложении">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ОсновнаяФормаОтчета">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ОсновнаяФормаВариантаОтчета">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ОсновнаяФормаНастроекОтчета">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ОсновнаяФормаПоиска">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="КомандныйИнтерфейс">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="РабочаяОбластьНачальнойСтраницы">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="КомандныйИнтерфейсОсновногоРаздела">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="КартинкаОсновногоРаздела">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="КраткаяИнформация">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ПодробнаяИнформация">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="Логотип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="Заставка">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="АвторскиеПрава">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="АдресИнформацииОПоставщике">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="АдресИнформацииОКонфигурации">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ИнтерфейсКлиентскогоПриложения">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="РежимИспользованияМодальности">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+				<Property name="РежимИспользованияСинхронныхВызововРасширенийПлатформыИВнешнихКомпонент">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+				<Property name="РежимСовместимостиИнтерфейса">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+				</Property>
+			</Properties>
+		</Configuration>
+	</Objects>
+</Settings>

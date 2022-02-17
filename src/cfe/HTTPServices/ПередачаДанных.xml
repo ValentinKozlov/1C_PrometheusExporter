@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<HTTPService uuid="0805c647-55e7-4e29-9afb-a13a35a678eb">
+		<Properties>
+			<Name>ПередачаДанных</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передача данных</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>dt</RootURL>
+			<ReuseSessions>Use</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="7124b2c7-d38e-40b9-a934-e6eb9de99340">
+				<Properties>
+					<Name>ХранилищеИИдентификатор</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Хранилище и идентификатор</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/storage/{Storage}/{ID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="605f52a9-e95b-4900-9e41-449d7da01348">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ХранилищеИИдентификаторGETЗапрос</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="462355c3-a1d9-488b-91ea-979f880f910f">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ХранилищеИИдентификаторPOSTЗапрос</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="a2c5b30f-2b9b-4b4c-97e1-9c87ffe2017d">
+				<Properties>
+					<Name>ТомИПутьКФайлу</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Том и путь к файлу</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/volume/{VolumeID}/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="eef86a5c-167f-45cc-b223-ec949be60a2f">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ТомИПутьКФайлуGETЗапрос</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="5da41133-446b-453b-95ff-2141a3c38059">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ТомИПутьКФайлуPOSTЗапрос</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="0db3a754-10fd-41d4-aa40-ff26ff1ab0e8">
+				<Properties>
+					<Name>Получить</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/download/{ID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="60eb925b-bd12-42d2-8d1e-bcffb2e26580">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьGETЗапрос</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="64269878-6fd5-47b6-9892-f8f0e30caf1b">
+				<Properties>
+					<Name>Отправить</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправить</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/upload/{ID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="6070d55f-3274-492d-b1e5-1dca70f5aa5d">
+						<Properties>
+							<Name>PUT</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>PUT</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>ОтправитьPUTЗапрос</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

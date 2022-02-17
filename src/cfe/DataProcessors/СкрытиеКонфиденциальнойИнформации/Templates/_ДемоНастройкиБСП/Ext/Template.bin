@@ -1,0 +1,198 @@
+﻿<ValueTable xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTable">
+	<column>
+		<Name xsi:type="xs:string">Пометка</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">ПолноеИмя</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">ПравилоОбработки</Name>
+		<ValueType/>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">ПредставлениеПравилаОбработки</Name>
+		<ValueType/>
+	</column>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоКонтрагенты.СтандартныеРеквизиты</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string"/>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоКонтрагенты.СтандартныеРеквизиты.Наименование</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоКонтрагенты.Реквизиты.НаименованиеПолное</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоКонтрагенты.Реквизиты.ИНН</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоКонтрагенты.ДополнительныеРеквизиты</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string"/>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоКонтрагенты.ДополнительныеРеквизиты.Значение</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоКонтрагенты.ДополнительныеРеквизиты.ТекстоваяСтрока</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоПартнеры.СтандартныеРеквизиты</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string"/>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоПартнеры.СтандартныеРеквизиты.Наименование</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоПартнеры.ДополнительныеРеквизиты</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string"/>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоПартнеры.ДополнительныеРеквизиты.Значение</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоПартнеры.ДополнительныеРеквизиты.ТекстоваяСтрока</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.СтандартныеРеквизиты</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string"/>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.СтандартныеРеквизиты.Наименование</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.Реквизиты.ДатаРождения</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.Реквизиты.МестоРождения</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.Реквизиты.СерияДокумента</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.Реквизиты.НомерДокумента</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.Реквизиты.КемВыданДокумент</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:decimal">1</Value>
+		<Value xsi:type="xs:string">Справочник._ДемоФизическиеЛица.Реквизиты.СНИЛС</Value>
+		<Value xsi:type="ValueListType">
+			<valueType/>
+			<lastId xsi:type="xs:decimal">-1</lastId>
+		</Value>
+		<Value xsi:type="xs:string">По умолчанию</Value>
+	</row>
+</ValueTable>

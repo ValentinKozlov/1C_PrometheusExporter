@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Изменение номера телефона</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаИнструкция" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок изменения номера телефона:
+</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<VerticalSpacing>OneAndHalf</VerticalSpacing>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнструкцияРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<LabelDecoration name="Заголовок" id="104">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок изменения номера телефона:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаголовокКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ЗаголовокРасширеннаяПодсказка" id="106"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьШаг1" id="98">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1. Введите новый номер телефона и подтвердите его</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьШаг1КонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="НадписьШаг1РасширеннаяПодсказка" id="100"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаНовыйТелефон" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый телефон</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНовыйТелефонРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<LabelDecoration name="Отступ" id="101">
+							<Visible>false</Visible>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отступ</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОтступКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="ОтступРасширеннаяПодсказка" id="103"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНомерТелефонаДляПроверки" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер телефона для проверки</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерТелефонаДляПроверкиExtendedTooltip" id="119"/>
+							<ChildItems>
+								<InputField name="НовыйТелефон" id="7">
+									<DataPath>НовыйТелефон</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>    Телефон</v8:content>
+										</v8:item>
+									</Title>
+									<Width>17</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<EditTextUpdate>DontUse</EditTextUpdate>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Например: +7 999 999-99-99</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="НовыйТелефонКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="НовыйТелефонРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">НовыйТелефонПриИзменении</Event>
+										<Event name="EditTextChange">НовыйТелефонИзменениеТекстаРедактирования</Event>
+									</Events>
+								</InputField>
+								<PictureDecoration name="КартинкаТелефонПроверен" id="115">
+									<Width>1</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка телефон проверен</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаТелефонПроверенКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="КартинкаТелефонПроверенРасширеннаяПодсказка" id="117"/>
+								</PictureDecoration>
+								<Button name="ПроверитьНомер" id="66">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПроверитьНомер</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПроверитьНомерРасширеннаяПодсказка" id="67"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКодПодтверждения" id="90">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код подтверждения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКодПодтвержденияРасширеннаяПодсказка" id="91"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКодИОтменаВводаНовогоТелефона" id="107">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Код и отмена ввода нового телефона</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКодИОтменаВводаНовогоТелефонаРасширеннаяПодсказка" id="108"/>
+									<ChildItems>
+										<InputField name="КодПодтверждения" id="80">
+											<DataPath>КодПодтверждения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalStretch>false</HorizontalStretch>
+											<EditTextUpdate>DontUse</EditTextUpdate>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Введите код из SMS</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="КодПодтвержденияКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="КодПодтвержденияРасширеннаяПодсказка" id="82"/>
+											<Events>
+												<Event name="OnChange">КодПодтвержденияПриИзменении</Event>
+												<Event name="EditTextChange">КодПодтвержденияИзменениеТекстаРедактирования</Event>
+											</Events>
+										</InputField>
+										<PictureDecoration name="ОтменитьПроверкуТелефона" id="112">
+											<Width>1</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить проверку телефона</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить изменение</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ОтменитьПроверкуТелефонаКонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="ОтменитьПроверкуТелефонаРасширеннаяПодсказка" id="114"/>
+											<Events>
+												<Event name="Click">ОтменитьПроверкуТелефонаНажатие</Event>
+											</Events>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ОтправитьКодПовторно" id="88">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОтправитьКодПовторно</CommandName>
+									<TextColor>#807A76</TextColor>
+									<ExtendedTooltip name="ОтправитьКодПовторноРасширеннаяПодсказка" id="89"/>
+								</Button>
+								<LabelField name="НадписьОбратногоОтсчета" id="95">
+									<DataPath>НадписьОбратногоОтсчета</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>40</Width>
+									<TextColor>#807A76</TextColor>
+									<ContextMenu name="НадписьОбратногоОтсчетаКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="НадписьОбратногоОтсчетаРасширеннаяПодсказка" id="97"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг2" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаг 2</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг2РасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьШаг2" id="23">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>2. Распечатайте &lt;link #НапечататьЗаявление&gt;заявление&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьШаг2КонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="НадписьШаг2РасширеннаяПодсказка" id="25"/>
+							<Events>
+								<Event name="URLProcessing">НадписьШаг1ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="НадписьШаг3" id="33">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>3. Подпишите заявление и поставьте печать</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьШаг3КонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="НадписьШаг3РасширеннаяПодсказка" id="35"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьШаг4" id="36">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>4. Заверьте заявление у сотрудника обслуживающей организации, подключившей к сервису 1С-Отчетность
+</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьШаг4КонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="НадписьШаг4РасширеннаяПодсказка" id="38"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьШаг5" id="39">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>5. Отсканируйте заявление</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьШаг5КонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="НадписьШаг5РасширеннаяПодсказка" id="41"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаШаг6" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаг 6</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг6РасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьШаг6" id="60">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>6. Приложите файл: </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьШаг6КонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="НадписьШаг6РасширеннаяПодсказка" id="62"/>
+						</LabelDecoration>
+						<LabelField name="ФайлЗаявления" id="70">
+							<DataPath>ФайлЗаявления</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ФайлЗаявленияКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ФайлЗаявленияРасширеннаяПодсказка" id="72"/>
+							<Events>
+								<Event name="Click">ФайлЗаявленияНажатие</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг7" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаг 7</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг7РасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьШаг7" id="42">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>7. Отправьте заявление на линию клиентской поддержки 1cfresh.com</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьШаг7КонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="НадписьШаг7РасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+						<Button name="ОтправитьЗаявление" id="47">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОтправитьЗаявление</CommandName>
+							<ExtendedTooltip name="ОтправитьЗаявлениеРасширеннаяПодсказка" id="48"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Информация" id="77">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление принято к рассмотрению.
+По результатам рассмотрения заявления вы получите SMS на номер %1</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнформацияКонтекстноеМеню" id="78"/>
+			<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="79"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Сертификат" id="2">
+			<Type/>
+		</Attribute>
+		<Attribute name="НовыйТелефон" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлЗаявления" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл заявления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодПодтверждения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код подтверждения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НадписьОбратногоОтсчета" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись обратного отсчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаявлениеОтправлено" id="14">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗаявления" id="17">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресФайлаЗаявления" id="18">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Таймер" id="1">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверкаТелефонДляПаролей" id="19">
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьНомер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьНомер</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьЗаявление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить заявление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить заявление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьЗаявление</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьКодПовторно" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить код повторно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить код повторно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьКодПовторно</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

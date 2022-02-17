@@ -1,0 +1,42 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2">
+	<import namespace="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10"/>
+	<import namespace="http://www.1c.ru/SSL/Exchange/Message"/>
+	<valueType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="СправочникСсылка.ПричиныВозвратаТовара" base="d2p1:Ref"/>
+	<objectType name="ОбщиеСвойстваДанныеНоменклатурыРасш">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2" name="Номенклатура" type="d3p1:КлючевыеСвойстваНоменклатураРасш"/>
+		<property name="КодТовараВСистемеПокупателя" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="КлючевыеСвойстваНоменклатураРасш">
+		<property name="GTIN" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="КлючевыеСвойстваОрганизацияРасш">
+		<property name="ИдентификаторОрганизации" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="КлючевыеСвойстваПричиныВозвратаТовара">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2" name="Ссылка" type="d3p1:СправочникСсылка.ПричиныВозвратаТовара" lowerBound="0"/>
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="КлючевыеСвойстваРеализацияТоваровУслугРасш">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2" name="Организация" type="d3p1:КлючевыеСвойстваОрганизацияРасш"/>
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10" name="Подразделение" type="d3p1:КлючевыеСвойстваПодразделение" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10" name="Документ.РеализацияТоваровУслуг" base="d2p1:Документ.РеализацияТоваровУслуг">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2" name="КлючевыеСвойстваРасш" type="d3p1:КлючевыеСвойстваРеализацияТоваровУслугРасш"/>
+		<property name="СрокВозвратаВДнях" type="xs:int" lowerBound="0"/>
+		<property name="ТоварыРасш" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.РеализацияТоваровУслуг.Товары">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2" name="Строка" type="d3p1:Документ.РеализацияТоваровУслуг.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.РеализацияТоваровУслуг.Товары.Строка">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2" name="ДанныеНоменклатуры" type="d3p1:ОбщиеСвойстваДанныеНоменклатурыРасш"/>
+		<property name="СрокГодности" type="xs:date" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10" name="Справочник.Организации" base="d2p1:Справочник.Организации">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/_DemoEnterpriseDataExt/1.2" name="КлючевыеСвойстваРасш" type="d3p1:КлючевыеСвойстваОрганизацияРасш"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SSL/Exchange/Message" name="Справочник.ПричиныВозвратаТовара" base="d2p1:Object" open="true" sequenced="true">
+		<property name="КлючевыеСвойства"/>
+	</objectType>
+</package>

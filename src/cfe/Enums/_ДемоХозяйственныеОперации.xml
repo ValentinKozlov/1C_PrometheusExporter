@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Enum uuid="4eb24382-84b3-459a-a133-ce1de48cc9c8">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef._ДемоХозяйственныеОперации" category="Ref">
+				<xr:TypeId>44150ca3-83d9-49be-b680-06f1fae62e1a</xr:TypeId>
+				<xr:ValueId>3a686106-c713-411d-9ae4-87920744eed8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager._ДемоХозяйственныеОперации" category="Manager">
+				<xr:TypeId>9f0b7880-2048-47d0-83fc-54ea43e3b2b0</xr:TypeId>
+				<xr:ValueId>f68ff0b9-15ab-479d-a156-824acc551064</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList._ДемоХозяйственныеОперации" category="List">
+				<xr:TypeId>9a616315-2e12-44da-8313-ce277e966336</xr:TypeId>
+				<xr:ValueId>0b8ceb6c-95df-47ed-9d92-545f59fc6058</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>_ДемоХозяйственныеОперации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Демо: Хозяйственные операции</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Пример использования подсистемы "Управление доступом", когда доступ ограничивается по внутреннему типу документа (объекта)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="bd4ff31d-c23b-4f98-af8d-2f5186f25fde">
+				<Properties>
+					<Name>ВозвратДенежныхСредствОтПодотчетника</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возврат денежных средств от подотчетника</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2b68ce78-2faf-4ba8-ba86-f8aa8cdcf49f">
+				<Properties>
+					<Name>ВыдачаДенежныхСредствПодотчетнику</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выдача денежных средств подотчетнику</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="40ad7dac-887a-42fe-a376-b4608b09fe05">
+				<Properties>
+					<Name>ВыдачаЗарплаты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выдача зарплаты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

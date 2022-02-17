@@ -1,0 +1,19 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/1cFresh/Application/Permissions/Manifes/1.0.0.1">
+	<import namespace="http://www.1c.ru/1cFresh/Application/Permissions/1.0.0.1"/>
+	<import namespace="http://www.1c.ru/1cFresh/Application/Permissions/1.0.0.2"/>
+	<import namespace="http://www.1c.ru/1cFresh/Application/Manifest/1.0.0.1"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Manifest/1.0.0.1" name="RequiredPermissions" base="d2p1:ExtendedInfoItem">
+		<property name="Permission" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="AddinBundle">
+		<property name="TemplateName" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Manifes/1.0.0.1" name="Files" type="d3p1:AddinFile" upperBound="-1"/>
+	</objectType>
+	<objectType name="AddinFile">
+		<property name="FileName" type="xs:string"/>
+		<property name="Hash" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Manifest/1.0.0.1" name="Addins" base="d2p1:ExtendedInfoItem">
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Manifes/1.0.0.1" name="Bundles" type="d3p1:AddinBundle" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

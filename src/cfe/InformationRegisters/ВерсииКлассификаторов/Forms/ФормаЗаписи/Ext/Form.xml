@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="13">
+			<DataPath>Запись.Наименование</DataPath>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Идентификатор" id="1">
+			<DataPath>Запись.Идентификатор</DataPath>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="ГруппаДатаВерсия" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата версия</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаВерсияРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="ДатаОбновления" id="30">
+					<DataPath>Запись.ДатаОбновления</DataPath>
+					<ContextMenu name="ДатаОбновленияКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ДатаОбновленияРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="Версия" id="4">
+					<DataPath>Запись.Версия</DataPath>
+					<ContextMenu name="ВерсияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройки" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиЛеваяКолонка" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиЛеваяКолонкаРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<CheckBoxField name="ОбновлятьАвтоматический" id="7">
+							<DataPath>Запись.ОбновлятьАвтоматически</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбновлятьАвтоматическийКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОбновлятьАвтоматическийРасширеннаяПодсказка" id="9"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОбщиеДанные" id="10">
+							<DataPath>Запись.ОбщиеДанные</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбщиеДанныеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОбщиеДанныеРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиПраваяКолонка" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиПраваяКолонкаРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<CheckBoxField name="СохранятьФайлВКэш" id="16">
+							<DataPath>Запись.СохранятьФайлВКэш</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СохранятьФайлВКэшКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СохранятьФайлВКэшРасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОбработкаРазделенныхДанных" id="19">
+							<DataPath>Запись.ОбработкаРазделенныхДанных</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбработкаРазделенныхДанныхКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ОбработкаРазделенныхДанныхРасширеннаяПодсказка" id="21"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ВерсииКлассификаторов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

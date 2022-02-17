@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<DocumentJournal uuid="353b5b30-e2a1-48e3-af13-fe532642cfca">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection._ДемоЖурналВсехДокументов" category="Selection">
+				<xr:TypeId>06181ce6-8386-418e-9c9c-527c5c03b483</xr:TypeId>
+				<xr:ValueId>c92b44c6-424a-4baf-b750-538cb385d72c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList._ДемоЖурналВсехДокументов" category="List">
+				<xr:TypeId>87f507bc-9732-48c7-ac2c-020515d671b1</xr:TypeId>
+				<xr:ValueId>29b4b65d-6f9a-4208-9f10-40d33f7118e8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager._ДемоЖурналВсехДокументов" category="Manager">
+				<xr:TypeId>3459965b-b82a-49b3-bb29-a4d18c591c20</xr:TypeId>
+				<xr:ValueId>a31fa2b6-2383-40cd-ac06-e6298a7c7b96</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>_ДемоЖурналВсехДокументов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Демо: Журнал всех документов</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal._ДемоЖурналВсехДокументов.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоЗаказПокупателя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоКорректировкаОстатковТоваровВМестахХранения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоНачислениеЗарплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоОприходованиеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоПеремещениеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоПоступлениеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоРасходныйКассовыйОрдер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоРеализацияТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоСписаниеБезналичныхДенежныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоСписаниеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоСчетНаОплатуПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоСчетФактураПолученный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Анкета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Встреча</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗапланированноеВзаимодействие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НазначениеОпросов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтзывСогласияНаОбработкуПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СогласиеНаОбработкуПерсональныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СообщениеSMS</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТелефонныйЗвонок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмоВходящее</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмоИсходящее</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

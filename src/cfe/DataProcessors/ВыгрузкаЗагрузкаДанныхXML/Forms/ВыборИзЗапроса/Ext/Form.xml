@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаДобавитьВРезультатВыгрузки" id="50">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ДобавитьВРезультатВыгрузки</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выбрать результат</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаДобавитьВРезультатВыгрузкиРасширеннаяПодсказка" id="51"/>
+			</Button>
+			<Button name="ФормаВыполнить" id="14">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьЗапрос</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаВыполнитьРасширеннаяПодсказка" id="15"/>
+			</Button>
+			<Button name="ФормаЗаполнитьПараметры" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьПараметры</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьПараметрыРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="ПараметрыЗапроса" id="3">
+			<Representation>List</Representation>
+			<Height>4</Height>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПараметрыЗапроса</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры запроса</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПараметрыЗапросаКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="ПараметрыЗапросаКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПараметрыЗапросаРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="ПараметрыЗапросаSearchString" id="52">
+				<AdditionSource>
+					<Item>ПараметрыЗапроса</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыЗапросаSearchStringContextMenu" id="53"/>
+				<ExtendedTooltip name="ПараметрыЗапросаSearchStringExtendedTooltip" id="54"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПараметрыЗапросаViewStatus" id="55">
+				<AdditionSource>
+					<Item>ПараметрыЗапроса</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыЗапросаViewStatusContextMenu" id="56"/>
+				<ExtendedTooltip name="ПараметрыЗапросаViewStatusExtendedTooltip" id="57"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПараметрыЗапросаSearchControl" id="58">
+				<AdditionSource>
+					<Item>ПараметрыЗапроса</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыЗапросаSearchControlContextMenu" id="59"/>
+				<ExtendedTooltip name="ПараметрыЗапросаSearchControlExtendedTooltip" id="60"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПараметрыЗапросаИмяПараметра" id="18">
+					<DataPath>ПараметрыЗапроса.ИмяПараметра</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыЗапросаИмяПараметраКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ПараметрыЗапросаИмяПараметраРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<CheckBoxField name="ПараметрыЗапросаЭтоВыражение" id="47">
+					<DataPath>ПараметрыЗапроса.ЭтоВыражение</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Необходимо установить флажок для параметров значения которых будут задаваться выражениями на встроенном языке.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПараметрыЗапросаЭтоВыражениеКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПараметрыЗапросаЭтоВыражениеРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">ПараметрыЗапросаЭтоВыражениеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ПараметрыЗапросаЗначениеПараметра" id="24">
+					<DataPath>ПараметрыЗапроса.ЗначениеПараметра</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="ПараметрыЗапросаЗначениеПараметраКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПараметрыЗапросаЗначениеПараметраРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<TextDocumentField name="ТекстЗапроса" id="7">
+			<DataPath>ДокументТекстЗапроса</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Width>100</Width>
+			<Height>8</Height>
+			<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="9"/>
+		</TextDocumentField>
+		<Pages name="ГруппаРезультатаЗапроса" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результата запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Height>12</Height>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаРезультатаЗапросаРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<Page name="ГруппаЗапросНеВыполнен" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрос не выполнен</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЗапросНеВыполненРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияЗапросНеВыполнен" id="44">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запрос не выполнен</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияЗапросНеВыполненКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ДекорацияЗапросНеВыполненРасширеннаяПодсказка" id="46"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРезультатЗапроса" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат запроса</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРезультатЗапросаРасширеннаяПодсказка" id="43"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВыгрузкаЗагрузкаДанныхXML</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДокументТекстЗапроса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыЗапроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяПараметра" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеПараметра" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ЭтоВыражение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипПараметра" id="4">
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьЗапрос" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьЗапрос</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПараметры" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПараметры</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьВРезультатВыгрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в результат выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в результат выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВРезультатВыгрузки</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

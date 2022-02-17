@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AccumulationRegisterAggregates xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Aggregate id="614c3fe4-5eb9-42f8-a634-d891f95d43e3">
+		<Use>Always</Use>
+		<Periodicity>Day</Periodicity>
+		<Dimensions>
+			<Dimension ref="AccumulationRegister._ДемоОборотыПоСчетамНаОплату.Dimension.Номенклатура">true</Dimension>
+		</Dimensions>
+	</Aggregate>
+</AccumulationRegisterAggregates>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<SubsystemsOrder>
+		<Subsystem>Subsystem._ДемоУправлениеДоступом</Subsystem>
+		<Subsystem>Subsystem._ДемоСинхронизацияДанных</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы</Subsystem>
+		<Subsystem>Subsystem._ДемоИнтегрируемыеПодсистемы</Subsystem>
+		<Subsystem>Subsystem._ДемоИнтегрируемыеПодсистемыПродолжение</Subsystem>
+		<Subsystem>Subsystem._ДемоБизнесПроцессыИЗадачи</Subsystem>
+		<Subsystem>Subsystem._ДемоАнкетирование</Subsystem>
+		<Subsystem>2c422f04-ae56-4bba-bf7c-dd8a38b4103f</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер</Subsystem>
+		<Subsystem>Subsystem._ДемоНормативноСправочнаяИнформация</Subsystem>
+		<Subsystem>Subsystem._ДемоИнструментыРазработчика</Subsystem>
+		<Subsystem>Subsystem.Администрирование</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<DataProcessor uuid="3e7e5030-9e58-48f2-8d7e-5337e8bcaf01">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ОбновлениеНаИсправительнуюВерсиюБСП" category="Object">
+				<xr:TypeId>e17e13ee-56a5-48ec-8856-c934731ec9b7</xr:TypeId>
+				<xr:ValueId>b96c6750-ddc0-43ed-aaba-cdf9c526e195</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ОбновлениеНаИсправительнуюВерсиюБСП" category="Manager">
+				<xr:TypeId>2a993138-9f4b-49e2-ab44-d73694313693</xr:TypeId>
+				<xr:ValueId>42b3eb3b-9394-4c38-bfc3-7d51167635fd</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОбновлениеНаИсправительнуюВерсиюБСП</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление на исправительную версию БСП</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>АПК:566 работа в веб-клиенте не предусмотрена</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ОбновлениеНаИсправительнуюВерсиюБСП.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+			<Template>ШаблонНастроек</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

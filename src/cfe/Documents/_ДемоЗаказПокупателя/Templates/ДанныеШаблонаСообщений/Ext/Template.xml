@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Данные</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДоставки</dataPath>
+			<field>ДатаДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусЗаказа</dataPath>
+			<field>СтатусЗаказа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресДоставки</dataPath>
+			<field>АдресДоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес доставки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДоговора</dataPath>
+			<field>ДатаДоговора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлектроннаяПочта</dataPath>
+			<field>ЭлектроннаяПочта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронная почта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДоговора</dataPath>
+			<field>НомерДоговора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКОплате</dataPath>
+			<field>СуммаКОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма к оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизическоеЛицоОбращение</dataPath>
+			<field>ФизическоеЛицоОбращение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физическое лицо обращение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактноеЛицоНаименование</dataPath>
+			<field>КонтактноеЛицоНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокумента</dataPath>
+			<field>СуммаДокумента</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	_ДемоЗаказПокупателя.Ссылка,
+	_ДемоЗаказПокупателя.Дата,
+	_ДемоЗаказПокупателя.Номер,
+	_ДемоЗаказПокупателя.СтатусЗаказа,
+	_ДемоЗаказПокупателя.СуммаДокумента,
+	ВЫБОР
+		КОГДА _ДемоЗаказПокупателя.СтатусЗаказа = ЗНАЧЕНИЕ(Перечисление._ДемоСтатусыЗаказовПокупателей.Согласован)
+				ТОГДА _ДемоЗаказПокупателя.СуммаДокумента
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаКОплате,
+	_ДемоЗаказПокупателя.Валюта,
+	_ДемоЗаказПокупателя.АдресДоставкиСтрокой КАК АдресДоставки,
+	_ДемоЗаказПокупателя.ДатаДоставки,
+	_ДемоЗаказПокупателя.ЭлектроннаяПочтаСтрокой КАК ЭлектроннаяПочта,
+	_ДемоДоговорыКонтрагентов.НомерДоговора КАК НомерДоговора,
+	_ДемоДоговорыКонтрагентов.ДатаДоговора КАК ДатаДоговора,
+	ВЫБОР
+		КОГДА _ДемоФизическиеЛица.Пол = ЗНАЧЕНИЕ(Перечисление._ДемоПолФизическогоЛица.Мужской)
+			ТОГДА &amp;ОбращениеМужскойРод
+		КОГДА _ДемоФизическиеЛица.Пол = ЗНАЧЕНИЕ(Перечисление._ДемоПолФизическогоЛица.Женский)
+			ТОГДА &amp;ОбращениеЖенскийРод
+		ИНАЧЕ &amp;ОбращениеПолНеопределен
+	КОНЕЦ КАК ФизическоеЛицоОбращение,
+	_ДемоФизическиеЛица.Наименование КАК КонтактноеЛицоНаименование
+ИЗ
+	Документ._ДемоЗаказПокупателя КАК _ДемоЗаказПокупателя
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник._ДемоДоговорыКонтрагентов КАК _ДемоДоговорыКонтрагентов
+		ПО _ДемоЗаказПокупателя.Договор = _ДемоДоговорыКонтрагентов.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник._ДемоФизическиеЛица КАК _ДемоФизическиеЛица
+		ПО _ДемоЗаказПокупателя.КонтактноеЛицо = _ДемоФизическиеЛица.Ссылка
+ГДЕ
+	_ДемоЗаказПокупателя.Ссылка = &amp;_ДемоЗаказПокупателя</query>
+	</dataSet>
+	<parameter>
+		<name>_ДемоЗаказПокупателя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Демо заказ покупателя</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef._ДемоЗаказПокупателя</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОбращениеЖенскийРод</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Обращение женский род</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОбращениеМужскойРод</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Обращение мужской род</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОбращениеПолНеопределен</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Обращение пол неопределен</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

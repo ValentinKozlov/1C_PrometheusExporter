@@ -1,0 +1,17 @@
+﻿<Settings xmlns="http://v8.1c.ru/8.3/config/merge/settings" version="1.0" platformVersion="8.3.9">
+	<MainConfiguration>
+		<Name/>
+		<Version/>
+		<Vendor/>
+	</MainConfiguration>
+	<SecondConfiguration>
+		<Name>БиблиотекаСтандартныхПодсистем</Name>
+		<Version/>
+		<Vendor>Фирма "1С"</Vendor>
+	</SecondConfiguration >
+	<Objects>
+		<Configuration>
+			<MergeRule>DoNotMerge</MergeRule>
+		</Configuration>
+	</Objects>
+</Settings>

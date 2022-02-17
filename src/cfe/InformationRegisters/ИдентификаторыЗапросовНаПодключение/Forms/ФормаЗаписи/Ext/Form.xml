@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="ОповещениеПользователю" id="16">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОповещениеПользователюКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОповещениеПользователюРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<InputField name="ИдентификаторИнтернетСервиса" id="1">
+			<DataPath>Запись.ИдентификаторСервисаСопровождения</DataPath>
+			<ContextMenu name="ИдентификаторИнтернетСервисаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИдентификаторИнтернетСервисаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Идентификатор" id="4">
+			<DataPath>Запись.Идентификатор</DataPath>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Состояние" id="7">
+			<DataPath>Запись.Состояние</DataPath>
+			<ContextMenu name="СостояниеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Пользователь" id="10">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ОписаниеОшибки" id="13">
+			<DataPath>Запись.ОписаниеОшибки</DataPath>
+			<ContextMenu name="ОписаниеОшибкиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОписаниеОшибкиРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="ОповещениеОтображено" id="19">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОповещениеОтображеноКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОповещениеОтображеноРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ИдентификаторыЗапросовНаПодключение</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

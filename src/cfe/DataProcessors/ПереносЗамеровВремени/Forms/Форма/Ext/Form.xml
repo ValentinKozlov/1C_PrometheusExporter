@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПеренести" id="27">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Перенести</CommandName>
+				<ExtendedTooltip name="ФормаПеренестиРасширеннаяПодсказка" id="28"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ОбнаруженыЗамеры" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнаружены замеры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ОбнаруженыЗамерыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ОбнаруженыЗамерыПериод" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обнаружены замеры период</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОбнаруженыЗамерыПериодРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ДатаНачалаОбнаружено" id="3">
+							<DataPath>Объект.ДатаНачалаОбнаружено</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата начала</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ДатаНачалаОбнаруженоКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ДатаНачалаОбнаруженоРасширеннаяПодсказка" id="5"/>
+						</InputField>
+						<InputField name="ДатаОкончанияОбнаружено" id="6">
+							<DataPath>Объект.ДатаОкончанияОбнаружено</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата окончания</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ДатаОкончанияОбнаруженоКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ДатаОкончанияОбнаруженоРасширеннаяПодсказка" id="8"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="КоличествоОбнаружено" id="11">
+					<DataPath>Объект.КоличествоОбнаружено</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КоличествоОбнаруженоКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="КоличествоОбнаруженоРасширеннаяПодсказка" id="13"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПеренестиЗамеры" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести замеры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ПеренестиЗамерыРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<UsualGroup name="ПеренестиЗамерыПериод" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перенести замеры период</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПеренестиЗамерыПериодРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<InputField name="ДатаНачалаПеренос" id="16">
+							<DataPath>Объект.ДатаНачалаПеренос</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата начала</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаНачалаПереносКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДатаНачалаПереносРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="ДатаОкончанияПеренос" id="19">
+							<DataPath>Объект.ДатаОкончанияПеренос</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата окончания</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаОкончанияПереносКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДатаОкончанияПереносРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="КоличествоОсталосьПеренести" id="24">
+					<DataPath>Объект.КоличествоОсталосьПеренести</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КоличествоОсталосьПеренестиКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="КоличествоОсталосьПеренестиРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПереносЗамеровВремени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Перенести" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Перенести</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

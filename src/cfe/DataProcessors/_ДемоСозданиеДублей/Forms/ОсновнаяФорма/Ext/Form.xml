@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПуск" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПускСКонтролем</CommandName>
+				<ExtendedTooltip name="ФормаПускExtendedTooltip" id="5"/>
+			</Button>
+			<Button name="ФормаПускБезКонтроля" id="63">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПускБезКонтроля</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаПускБезКонтроляРасширеннаяПодсказка" id="64"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Декорация1" id="43">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание дублей в справочнике Демо: Номенклатура и других справочниках
+для демонстрации сценариев работы поиска и удаления дублей.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="45"/>
+		</LabelDecoration>
+		<CheckBoxField name="ПростыеДублиИспользование" id="79">
+			<DataPath>ПростыеДублиИспользование</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Простые дубли:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПростыеДублиИспользованиеКонтекстноеМеню" id="80"/>
+			<ExtendedTooltip name="ПростыеДублиИспользованиеРасширеннаяПодсказка" id="81"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаПростыеДубли" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Простые дубли</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПростыеДублиРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация2" id="46">
+					<Width>1</Width>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="48"/>
+				</LabelDecoration>
+				<InputField name="ПростыеДублиКоличество" id="87">
+					<DataPath>ПростыеДублиКоличество</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>6</Width>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ПростыеДублиКоличествоКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ПростыеДублиКоличествоРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<LabelDecoration name="Декорация5" id="84">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>объектов с наименованием:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация5КонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="86"/>
+				</LabelDecoration>
+				<InputField name="ПростыеДублиПрефикс" id="90">
+					<DataPath>ПростыеДублиПрефикс</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>20</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПростыеДублиПрефиксКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ПростыеДублиПрефиксРасширеннаяПодсказка" id="92"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="РегистрыСведенийИспользование" id="93">
+			<DataPath>РегистрыСведенийИспользование</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дубли с записями в регистрах сведений:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РегистрыСведенийИспользованиеКонтекстноеМеню" id="94"/>
+			<ExtendedTooltip name="РегистрыСведенийИспользованиеРасширеннаяПодсказка" id="95"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаРегистрыСведений" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа простые дубли</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРегистрыСведенийРасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация6" id="98">
+					<Width>1</Width>
+					<ContextMenu name="Декорация6КонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="100"/>
+				</LabelDecoration>
+				<InputField name="РегистрыСведенийКоличество" id="101">
+					<DataPath>РегистрыСведенийКоличество</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>6</Width>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="РегистрыСведенийКоличествоКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="РегистрыСведенийКоличествоРасширеннаяПодсказка" id="103"/>
+				</InputField>
+				<LabelDecoration name="Декорация7" id="104">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>объектов с наименованием:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация7КонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="106"/>
+				</LabelDecoration>
+				<InputField name="РегистрыСведенийПрефикс" id="107">
+					<DataPath>РегистрыСведенийПрефикс</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>20</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="РегистрыСведенийПрефиксКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="РегистрыСведенийПрефиксРасширеннаяПодсказка" id="109"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="РегистрыНакопленияИспользование" id="110">
+			<DataPath>РегистрыНакопленияИспользование</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дубли, использующиеся в документах и регистрах накопления:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РегистрыНакопленияИспользованиеКонтекстноеМеню" id="111"/>
+			<ExtendedTooltip name="РегистрыНакопленияИспользованиеРасширеннаяПодсказка" id="112"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаРегистрыНакопления" id="113">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа простые дубли</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРегистрыНакопленияРасширеннаяПодсказка" id="114"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация8" id="115">
+					<Width>1</Width>
+					<ContextMenu name="Декорация8КонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="117"/>
+				</LabelDecoration>
+				<InputField name="РегистрыНакопленияКоличество" id="118">
+					<DataPath>РегистрыНакопленияКоличество</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>6</Width>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="РегистрыНакопленияКоличествоКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="РегистрыНакопленияКоличествоРасширеннаяПодсказка" id="120"/>
+				</InputField>
+				<LabelDecoration name="Декорация9" id="121">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>объектов с наименованием:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация9КонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="123"/>
+				</LabelDecoration>
+				<InputField name="РегистрыНакопленияПрефикс" id="124">
+					<DataPath>РегистрыНакопленияПрефикс</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>20</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="РегистрыНакопленияПрефиксКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="РегистрыНакопленияПрефиксРасширеннаяПодсказка" id="126"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject._ДемоСозданиеДублей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПростыеДублиКоличество" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ПростыеДублиКоличество</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПростыеДублиПрефикс" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон наименования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПростыеДублиИспользование" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создавать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПростыеДублиИспользование</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РегистрыСведенийИспользование" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создавать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>РегистрыСведенийИспользование</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РегистрыСведенийКоличество" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>РегистрыСведенийКоличество</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РегистрыСведенийПрефикс" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон наименования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РегистрыНакопленияПрефикс" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон наименования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РегистрыНакопленияКоличество" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>РегистрыНакопленияКоличество</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РегистрыНакопленияИспользование" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создавать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>РегистрыНакопленияИспользование</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПроверятьЗаполнение" id="14">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПускСКонтролем" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пуск с контролем</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПускСКонтролем</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПускБезКонтроля" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать без проверок заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пуск без контроля</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПускБезКонтроля</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

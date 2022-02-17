@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Полезные ссылки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ОбщаяКомандаЗапуститьОнлайнПоддержку" id="3">
+			<Type>Hyperlink</Type>
+			<CommandName>CommonCommand.СвязатьсяСоСпециалистомОнлайнПоддержки</CommandName>
+			<ExtendedTooltip name="ОбщаяКомандаЗапуститьОнлайнПоддержкуРасширеннаяПодсказка" id="4"/>
+		</Button>
+		<Button name="ОбщаяКоманда_ДемоСтраницаПродуктаНаСайте1С" id="7">
+			<Type>Hyperlink</Type>
+			<CommandName>CommonCommand._ДемоСтраницаПродуктаНаСайте1С</CommandName>
+			<ExtendedTooltip name="ОбщаяКоманда_ДемоСтраницаПродуктаНаСайте1СРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="ОбщаяКоманда_ДемоДокументацияПоВнедрениюИИспользованию" id="9">
+			<Type>Hyperlink</Type>
+			<CommandName>CommonCommand._ДемоДокументацияПоВнедрениюИИспользованию</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документация по внедрению</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ОбщаяКоманда_ДемоДокументацияПоВнедрениюИИспользованиюРасширеннаяПодсказка" id="10"/>
+		</Button>
+		<Button name="ОбщаяКоманда_ДемоСтандартыРазработки" id="11">
+			<Type>Hyperlink</Type>
+			<CommandName>CommonCommand._ДемоСтандартыРазработки</CommandName>
+			<ExtendedTooltip name="ОбщаяКоманда_ДемоСтандартыРазработкиРасширеннаяПодсказка" id="12"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+</Form>

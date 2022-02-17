@@ -1,0 +1,27 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1">
+	<import namespace="http://www.1c.ru/1cFresh/Data/Dump/1.0.2.1"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Dump/1.0.2.1" name="ValueStorageArtefact" base="d2p1:Artefact">
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="Owner" type="d3p1:OwnerAbstract"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="Data" type="d3p1:ValueStorageData"/>
+	</objectType>
+	<objectType name="ValueStorageData" abstract="true"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="BinaryValueStorageData" base="d2p1:ValueStorageData">
+		<property name="RelativeFilePath" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="SerializableValueStorageData" base="d2p1:ValueStorageData">
+		<property name="Data" type="xs:anyType"/>
+	</objectType>
+	<objectType name="OwnerAbstract" abstract="true"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="OwnerConstant" base="d2p1:OwnerAbstract"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="OwnerObject" base="d2p1:OwnerAbstract">
+		<property name="Property" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="OwnerObjectTabularSection" base="d2p1:OwnerObject">
+		<property name="TabularSection" type="xs:string"/>
+		<property name="LineNumber" type="xs:long"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="OwnerRecordset" base="d2p1:OwnerObject">
+		<property name="LineNumber" type="xs:long"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Artefacts/ValueStorage/1.0.0.1" name="OwnerBody" base="d2p1:OwnerAbstract"/>
+</package>

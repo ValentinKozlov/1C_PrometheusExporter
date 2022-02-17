@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<DataProcessor uuid="52e6bbc7-9df1-4844-8582-5eb9cf5bcb2c">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject._ДемоШаблонСообщенияДляЗаказаПокупателя" category="Object">
+				<xr:TypeId>75ae8cac-8734-40a7-a9ae-4a982436180b</xr:TypeId>
+				<xr:ValueId>008359c3-0394-43f1-8c74-172c5d8745ef</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager._ДемоШаблонСообщенияДляЗаказаПокупателя" category="Manager">
+				<xr:TypeId>2381411b-67c3-487d-ac45-1178d51a9b7f</xr:TypeId>
+				<xr:ValueId>2a7ccec8-e1bf-4ff5-a0dd-350d7d03cada</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>_ДемоШаблонСообщенияДляЗаказаПокупателя</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Демо: Шаблон сообщения для заказа покупателя</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Для обновления следует поднять номер версии в функции СведенияОВнешнейОбработке и запустить обновление ИБ.</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Template>МакетПисьмоHTML</Template>
+			<Template>Логотип</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

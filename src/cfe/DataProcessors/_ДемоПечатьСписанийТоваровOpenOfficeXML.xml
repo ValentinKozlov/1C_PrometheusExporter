@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<DataProcessor uuid="3a313dae-a2e9-4f69-8500-3116e4ecc0f6">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject._ДемоПечатьСписанийТоваровOpenOfficeXML" category="Object">
+				<xr:TypeId>d207af9b-5dd8-4c05-a41b-e840d07ad38d</xr:TypeId>
+				<xr:ValueId>65435d1c-6720-46c9-acce-fb0736f1eca8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager._ДемоПечатьСписанийТоваровOpenOfficeXML" category="Manager">
+				<xr:TypeId>fb27f2ac-6ba1-43b8-bd3b-16547cde9333</xr:TypeId>
+				<xr:ValueId>8ab06482-bea5-4899-90d3-8aeaa8f2d22b</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>_ДемоПечатьСписанийТоваровOpenOfficeXML</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Демо: Печать списаний товаров с использованием макета Open Office XML</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Для обновления следует поднять номер версии в функции СведенияОВнешнейОбработке и запустить обновление ИБ.</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>DataProcessor._ДемоПечатьСписанийТоваровOpenOfficeXML.Form.ОсновнаяФорма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ОсновнаяФорма</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

@@ -1,0 +1,16 @@
+﻿<Array xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Array">
+	<Value xsi:type="xs:string">РегламентноеЗадание.РассылкаОтчетов</Value>
+	<Value xsi:type="xs:string">РегистрСведений.ИспользованиеПоставляемыхДополнительныхОтчетовИОбработокВОбластяхДанных</Value>
+	<Value xsi:type="xs:string">РегистрСведений.ОбработчикиОбновления</Value>
+	<Value xsi:type="xs:string">Константа.ОтложенноеОбновлениеЗавершеноУспешно</Value>
+	<Value xsi:type="xs:string">РегистрСведений.ОчередьИзвлеченияТекста</Value>
+	<Value xsi:type="xs:string">РегистрСведений.ПотокиОбновления</Value>
+	<Value xsi:type="xs:string">Константа.СведенияОБлокируемыхОбъектах</Value>
+	<Value xsi:type="xs:string">РегистрСведений.СостоянияОбменовДаннымиОбластейДанных</Value>
+	<Value xsi:type="xs:string">РегистрСведений.СостоянияУспешныхОбменовДаннымиОбластейДанных</Value>
+	<Value xsi:type="xs:string">РегистрСведений.СообщенияОбменаДаннымиОбластейДанных</Value>
+	<Value xsi:type="xs:string">РегистрСведений.ОчередьИнсталляцииПоставляемыхДополнительныхОтчетовИОбработокВОбластиДанных</Value>
+	<Value xsi:type="xs:string">Константа.СведенияОбОбновленииИБ</Value>
+	<Value xsi:type="xs:string">РегистрСведений.ВерсииПодсистемОбластейДанных</Value>
+	<Value xsi:type="xs:string">РегистрСведений.БлокировкиСеансовОбластейДанных</Value>
+</Array>

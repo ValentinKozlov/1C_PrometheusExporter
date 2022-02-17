@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<SubsystemsOrder>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоБазоваяФункциональность</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоГрупповоеИзменениеОбъектов</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоКонтрольВеденияУчета</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоВызовОнлайнПоддержки</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоОбновлениеВерсииИБ</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоОтчетОДвиженияхДокумента</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоОценкаПроизводительности</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоПоискИУдалениеДублей</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоПолнотекстовыйПоиск</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоПолучениеФайловИзИнтернета</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоПроверкаЛегальностиПолученияОбновления</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоРассылкиОтчетов</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоУдалениеПомеченныхОбъектов</Subsystem>
+		<Subsystem>Subsystem._ДемоСервисныеПодсистемы.Subsystem._ДемоУправлениеИтогамиИАгрегатами</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

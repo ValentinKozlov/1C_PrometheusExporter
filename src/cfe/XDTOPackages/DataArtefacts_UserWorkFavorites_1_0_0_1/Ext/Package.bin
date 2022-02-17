@@ -1,0 +1,19 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/1cFresh/Data/Artefacts/UserWorkFavorites/1.0.0.1">
+	<import namespace="http://www.1c.ru/1cFresh/Data/Dump/1.0.2.1"/>
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Data/Dump/1.0.2.1" name="FavoriteItemArtefact" base="d2p1:Artefact">
+		<property name="Important" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Data/Artefacts/UserWorkFavorites/1.0.0.1" name="URL" type="d3p1:URL" lowerBound="0"/>
+		<property name="Presentation" type="xs:string"/>
+	</objectType>
+	<objectType name="URL">
+		<property name="Template" type="xs:string"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Data/Artefacts/UserWorkFavorites/1.0.0.1" name="MainRef" type="d3p1:URLRef" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Data/Artefacts/UserWorkFavorites/1.0.0.1" name="AdditionalRef" type="d3p1:URLRef" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="URLRef">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Key" type="d3p1:UUID"/>
+		<property name="Value" type="xs:anyType"/>
+		<property name="RequreTypeAnnotition" type="xs:boolean"/>
+	</objectType>
+</package>

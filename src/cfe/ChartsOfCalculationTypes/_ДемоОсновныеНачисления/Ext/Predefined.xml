@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CalculationTypePredefinedItems" version="2.13">
+	<Item id="be330f4a-98de-45d6-890e-cce9fdc38d55">
+		<Name>ОкладПоДням</Name>
+		<Code>00001</Code>
+		<Description>Оклад по дням</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes._ДемоОсновныеНачисления.ОплатаКомандировки</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="362b089f-2e9b-4c4b-8a10-17dd0c0ea88b">
+		<Name>ОплатаКомандировки</Name>
+		<Code>00002</Code>
+		<Description>Оплата командировки</Description>
+		<ActionPeriodIsBase>true</ActionPeriodIsBase>
+	</Item>
+</PredefinedData>

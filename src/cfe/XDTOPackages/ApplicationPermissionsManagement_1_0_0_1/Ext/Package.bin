@@ -1,0 +1,39 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1">
+	<import namespace="http://www.1c.ru/1cFresh/Application/Permissions/1.0.0.1"/>
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<import namespace="http://www.1c.ru/SaaS/ServiceCommon"/>
+	<valueType name="ExternalModuleTypes" base="xs:string">
+		<enumeration xsi:type="xs:string">ApplicationExtension</enumeration>
+	</valueType>
+	<objectType name="PermissionsOwnerBase" abstract="true"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="PermissionsOwnerApplication" base="d2p1:PermissionsOwnerBase"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="PermissionsOwnerApplicationObject" base="d2p1:PermissionsOwnerBase">
+		<property name="Type" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="UUID" type="d3p1:UUID"/>
+		<property name="Description" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="PermissionsOwnerExternalModule" base="d2p1:PermissionsOwnerBase">
+		<property name="Type" type="d2p1:ExternalModuleTypes"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="UUID" type="d3p1:UUID"/>
+	</objectType>
+	<objectType name="PermissionModuleBase" abstract="true"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="PermissionModuleApplication" base="d2p1:PermissionModuleBase"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="PermissionModuleExternalModule" base="d2p1:PermissionModuleBase">
+		<property name="Type" type="d2p1:ExternalModuleTypes"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="UUID" type="d3p1:UUID"/>
+	</objectType>
+	<objectType name="PermissionsList">
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/1.0.0.1" name="Permission" type="d3p1:PermissionBase" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="PermissionsRequest">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="UUID" type="d3p1:UUID"/>
+		<property name="Module"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="Owner" type="d3p1:PermissionsOwnerBase"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="GrantPermissions" type="d3p1:PermissionsList" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="CancelPermissions" type="d3p1:PermissionsList" lowerBound="0"/>
+		<property name="ReplaceOwnerPermissions" type="xs:boolean"/>
+	</objectType>
+	<objectType name="PermissionsRequestsList">
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Management/1.0.0.1" name="Request" type="d3p1:PermissionsRequest" upperBound="-1"/>
+	</objectType>
+</package>

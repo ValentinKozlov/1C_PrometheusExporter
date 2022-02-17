@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Замер скорости открытия форм</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьЗамер" id="32">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>true</SkipOnInput>
+				<CommandName>Form.Command.ВыполнитьЗамер</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьЗамерРасширеннаяПодсказка" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ПараметрыЗамера" id="59">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПараметрыЗамераРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<InputField name="ИмяФормы" id="1">
+					<DataPath>ИмяОткрываемойФормы</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Width>70</Width>
+					<ExtendedEdit>true</ExtendedEdit>
+					<DropListButton>true</DropListButton>
+					<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+					<ChooseType>false</ChooseType>
+					<DropListWidth>70</DropListWidth>
+					<ContextMenu name="ИмяФормыКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИмяФормыРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="КоличествоЗамеров" id="56">
+					<DataPath>КоличествоЗамеров</DataPath>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<MaxValue xsi:type="xs:decimal">99</MaxValue>
+					<ContextMenu name="КоличествоЗамеровКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="КоличествоЗамеровРасширеннаяПодсказка" id="58"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПараметрыОткрытия" id="4">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<SkipOnInput>true</SkipOnInput>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПараметрыОткрытия</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры открытия</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПараметрыОткрытияКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ПараметрыОткрытияКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="ПараметрыОткрытияРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ПараметрыОткрытияСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ПараметрыОткрытия</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыОткрытияСтрокаПоискаКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ПараметрыОткрытияСтрокаПоискаРасширеннаяПодсказка" id="12"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПараметрыОткрытияСостояниеПросмотра" id="13">
+				<AdditionSource>
+					<Item>ПараметрыОткрытия</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыОткрытияСостояниеПросмотраКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="ПараметрыОткрытияСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПараметрыОткрытияУправлениеПоиском" id="18">
+				<AdditionSource>
+					<Item>ПараметрыОткрытия</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыОткрытияУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ПараметрыОткрытияУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПараметрыОткрытияИмя" id="23">
+					<DataPath>ПараметрыОткрытия.Имя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыОткрытияИмяКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПараметрыОткрытияИмяРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ПараметрыОткрытияЗначение" id="26">
+					<DataPath>ПараметрыОткрытия.Значение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыОткрытияЗначениеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПараметрыОткрытияЗначениеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="РезультатыЗамеров" id="34">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<SkipOnInput>true</SkipOnInput>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>РезультатыЗамеров</DataPath>
+			<RowPictureDataPath>РезультатыЗамеров.Picture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты замеров</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>CheckAll</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>Pickup</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>UncheckAll</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="РезультатыЗамеровКонтекстноеМеню" id="35">
+				<ChildItems>
+					<Button name="РезультатыЗамеровКонтекстноеМенюОчиститьРезультаты" id="61">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОчиститьРезультаты</CommandName>
+						<ExtendedTooltip name="РезультатыЗамеровКонтекстноеМенюОчиститьРезультатыРасширеннаяПодсказка" id="62"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="РезультатыЗамеровКоманднаяПанель" id="36">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РезультатыЗамеровРасширеннаяПодсказка" id="37"/>
+			<SearchStringAddition name="РезультатыЗамеровСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>РезультатыЗамеров</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыЗамеровСтрокаПоискаКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="РезультатыЗамеровСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РезультатыЗамеровСостояниеПросмотра" id="43">
+				<AdditionSource>
+					<Item>РезультатыЗамеров</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыЗамеровСостояниеПросмотраКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="РезультатыЗамеровСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РезультатыЗамеровУправлениеПоиском" id="48">
+				<AdditionSource>
+					<Item>РезультатыЗамеров</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыЗамеровУправлениеПоискомКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="РезультатыЗамеровУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="РезультатыЗамеровЗначение" id="53">
+					<DataPath>РезультатыЗамеров.Value</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<Font ref="sys:DefaultGUIFont" faceName="Courier New" height="10" kind="WindowsFont"/>
+					<ContextMenu name="РезультатыЗамеровЗначениеКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="РезультатыЗамеровЗначениеРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗамерСкоростиОткрытияФорм</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИмяОткрываемойФормы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя открываемой формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>ИмяОткрываемойФормы</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПараметрыОткрытия" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры открытия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПараметрыОткрытия</Field>
+			</Save>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РезультатыЗамеров" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты замеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="КоличествоЗамеров" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество замеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>КоличествоЗамеров</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОписаниеЗамера" id="6">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьЗамер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить замер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить замер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьЗамер</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьРезультаты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить результаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить результаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьРезультаты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

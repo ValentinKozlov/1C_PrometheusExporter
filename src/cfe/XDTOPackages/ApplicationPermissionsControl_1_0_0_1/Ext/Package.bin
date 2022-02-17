@@ -1,0 +1,23 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/1cFresh/Application/Permissions/Control/1.0.0.1">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<import namespace="http://www.1c.ru/SaaS/ServiceCommon"/>
+	<import namespace="http://www.1c.ru/SaaS/Messages"/>
+	<valueType name="PermissionRequestProcessingResultTypes" base="xs:string">
+		<enumeration xsi:type="xs:string">Approved</enumeration>
+		<enumeration xsi:type="xs:string">Rejected</enumeration>
+	</valueType>
+	<objectType name="PermissionRequestProcessingResult">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="RequestUUID" type="d3p1:UUID"/>
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Control/1.0.0.1" name="ProcessingResultType" type="d3p1:PermissionRequestProcessingResultTypes"/>
+		<property xmlns:d3p1="http://www.1c.ru/SaaS/ServiceCommon" name="RejectReason" type="d3p1:ErrorDescription"/>
+	</objectType>
+	<objectType name="PermissionsRequestsProcessingResultList">
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Control/1.0.0.1" name="ProcessingResult" type="d3p1:PermissionRequestProcessingResult" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/Messages" name="InfoBasePermissionsRequestProcessed" base="d2p1:Body">
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Control/1.0.0.1" name="ProcessingResultList" type="d3p1:PermissionsRequestsProcessingResultList"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/Messages" name="ApplicationPermissionsRequestProcessed" base="d2p1:AuthenticatedZoneBody">
+		<property xmlns:d3p1="http://www.1c.ru/1cFresh/Application/Permissions/Control/1.0.0.1" name="ProcessingResultList" type="d3p1:PermissionsRequestsProcessingResultList"/>
+	</objectType>
+</package>

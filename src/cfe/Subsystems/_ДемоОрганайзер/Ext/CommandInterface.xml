@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<CommandsOrder>
+		<Command name="CommonCommand._ДемоПанельОтчетовОрганайзер">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.РассылкиОтчетов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоВзаимодействия</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоЗаметкиПользователя</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоНапоминанияПользователя</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоВариантыОтчетов</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоОтправкаSMS</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоПереводТекста</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоРаботаСПочтовымиСообщениями</Subsystem>
+		<Subsystem>Subsystem._ДемоОрганайзер.Subsystem._ДемоРаботаСФайлами</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+	</GroupsOrder>
+</CommandInterface>

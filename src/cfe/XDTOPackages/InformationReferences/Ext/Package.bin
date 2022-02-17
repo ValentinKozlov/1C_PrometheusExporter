@@ -1,0 +1,20 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/SaaS/1.0/XMLSchema/ManageInfoCenter/InformationReferences">
+	<objectType name="reference">
+		<property name="namePredifined" type="xs:string" form="Attribute"/>
+		<property name="address" type="xs:string" form="Attribute"/>
+		<property name="name" type="xs:string" form="Attribute"/>
+		<property name="helpText" type="xs:string" form="Attribute"/>
+		<property name="dateFrom" type="xs:dateTime" form="Attribute"/>
+		<property name="dateTo" type="xs:dateTime" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/SaaS/1.0/XMLSchema/ManageInfoCenter/InformationReferences" name="context" type="d3p1:context" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="context">
+		<property name="tag" type="xs:string" form="Attribute"/>
+		<property name="versionFrom" type="xs:string" form="Attribute"/>
+		<property name="versionTo" type="xs:string" form="Attribute"/>
+		<property name="weight" type="xs:int" form="Attribute"/>
+	</objectType>
+	<objectType name="informationReferences">
+		<property xmlns:d3p1="http://www.1c.ru/SaaS/1.0/XMLSchema/ManageInfoCenter/InformationReferences" name="informationReferences" type="d3p1:reference" lowerBound="1" upperBound="-1"/>
+	</objectType>
+</package>

@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ЗаписатьИЗакрыть" id="75">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ЗаписатьИЗакрытьExtendedTooltip" id="123"/>
+			</Button>
+			<Button name="Отмена" id="76">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ОтменаExtendedTooltip" id="124"/>
+			</Button>
+			<Button name="Справка" id="4">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="СправкаExtendedTooltip" id="125"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа" id="5">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаExtendedTooltip" id="126"/>
+			<ChildItems>
+				<Page name="Главное" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Главное</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГлавноеРасширеннаяПодсказка" id="127"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУчетнаяЗапись" id="180">
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУчетнаяЗаписьРасширеннаяПодсказка" id="181"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьСведенияОПользователе" id="187">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учетная запись:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСведенияОПользователеКонтекстноеМеню" id="188"/>
+									<ExtendedTooltip name="НадписьСведенияОПользователеРасширеннаяПодсказка" id="189"/>
+								</LabelDecoration>
+								<Button name="СведенияОПользователе" id="68">
+									<Type>Hyperlink</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.СведенияОПользователе</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="СведенияОПользователеExtendedTooltip" id="132"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРабочаяДата" id="190">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рабочая дата</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаРабочаяДатаExtendedTooltip" id="191"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиРабочейДаты" id="192">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиРабочейДатыExtendedTooltip" id="193"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаРабочаяДатаОтступ" id="194">
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРабочаяДатаОтступExtendedTooltip" id="195"/>
+											<ChildItems>
+												<RadioButtonField name="ИспользоватьТекущуюДатуКомпьютера" id="199">
+													<DataPath>ИспользоватьТекущуюДатуКомпьютера</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<RadioButtonType>RadioButtons</RadioButtonType>
+													<ColumnsCount>1</ColumnsCount>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Текущая дата компьютера</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Другая дата:</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ИспользоватьТекущуюДатуКомпьютераКонтекстноеМеню" id="200"/>
+													<ExtendedTooltip name="ИспользоватьТекущуюДатуКомпьютераExtendedTooltip" id="201"/>
+													<Events>
+														<Event name="OnChange">ИспользоватьТекущуюДатуКомпьютераПриИзменении</Event>
+													</Events>
+												</RadioButtonField>
+												<InputField name="ЗначениеРабочейДаты" id="210">
+													<DataPath>ЗначениеРабочейДаты</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+													<Width>9</Width>
+													<ContextMenu name="ЗначениеРабочейДатыКонтекстноеМеню" id="211"/>
+													<ExtendedTooltip name="ЗначениеРабочейДатыExtendedTooltip" id="212">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Используется при создании новых документов для установки их даты</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗапускИЗавершениеРаботы" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запуск и завершение работы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаЗапускИЗавершениеРаботыРасширеннаяПодсказка" id="143"/>
+							<ChildItems>
+								<CheckBoxField name="ПредлагатьПерейтиНаСайтПриЗапуске" id="184">
+									<DataPath>ПредлагатьПерейтиНаСайтПриЗапуске</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПредлагатьПерейтиНаСайтПриЗапускеКонтекстноеМеню" id="185"/>
+									<ExtendedTooltip name="ПредлагатьПерейтиНаСайтПриЗапускеРасширеннаяПодсказка" id="186">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Демонстрирует открытие диалогов, блокирующих запуск программы,
+из общего модуля ОбщегоНазначенияКлиентПереопределяемый.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</CheckBoxField>
+								<CheckBoxField name="ЗапрашиватьПодтверждениеПриЗавершенииПрограммы" id="87">
+									<DataPath>ЗапрашиватьПодтверждениеПриЗавершенииПрограммы</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗапрашиватьПодтверждениеПриЗавершенииПрограммыКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ЗапрашиватьПодтверждениеПриЗавершенииПрограммыExtendedTooltip" id="145"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПоказыватьПредупреждениеОбУстановленныхОбновленияхПрограммы" id="239">
+									<DataPath>ПоказыватьПредупреждениеОбУстановленныхОбновленияхПрограммы</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказыватьПредупреждениеОбУстановленныхОбновленияхПрограммыКонтекстноеМеню" id="240"/>
+									<ExtendedTooltip name="ПоказыватьПредупреждениеОбУстановленныхОбновленияхПрограммыРасширеннаяПодсказка" id="241"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="РаботаВВебКлиенте" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Работа в веб-клиенте</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="РаботаВВебКлиентеРасширеннаяПодсказка" id="137"/>
+							<ChildItems>
+								<Pages name="ГруппаСтраницы" id="213">
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="214"/>
+									<ChildItems>
+										<Page name="ГруппаРасширениеНеУстановлено" id="215">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расширение для работы с 1С:Предприятием не установлено</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<ExtendedTooltip name="ГруппаРасширениеНеУстановленоРасширеннаяПодсказка" id="216"/>
+											<ChildItems>
+												<CheckBoxField name="НапоминатьОбУстановкеРасширенияРаботыСФайлами" id="175">
+													<DataPath>НапоминатьОбУстановкеРасширенияРаботыСФайлами</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="НапоминатьОбУстановкеРасширенияРаботыСФайламиКонтекстноеМеню" id="176"/>
+													<ExtendedTooltip name="НапоминатьОбУстановкеРасширенияРаботыСФайламиРасширеннаяПодсказка" id="177"/>
+												</CheckBoxField>
+												<Button name="УстановитьРасширениеРаботыСФайламиНаКлиенте" id="17">
+													<Type>UsualButton</Type>
+													<SkipOnInput>false</SkipOnInput>
+													<CommandName>Form.Command.УстановитьРасширениеРаботыСФайламиНаКлиенте</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Установить сейчас</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ExtendedTooltip name="УстановитьРасширениеРаботыСФайламиНаКлиентеExtendedTooltip" id="138">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Для выполнения ряда действий в программе при работе в веб-клиенте
+может потребоваться установить на данном компьютере расширение для работы с 1С:Предприятием.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</Button>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаРасширениеУстановлено" id="217">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расширение для работы с 1С:Предприятием установлено</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаРасширениеУстановленоРасширеннаяПодсказка" id="218"/>
+											<ChildItems>
+												<LabelDecoration name="РасширениеРаботыСФайламиУстановлено" id="219">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Расширение для работы с 1С:Предприятием установлено.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="РасширениеРаботыСФайламиУстановленоКонтекстноеМеню" id="220"/>
+													<ExtendedTooltip name="РасширениеРаботыСФайламиУстановленоРасширеннаяПодсказка" id="221"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа8" id="72">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доступ к внешним ресурсам</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ExtendedTooltip name="Группа8ExtendedTooltip" id="134"/>
+							<ChildItems>
+								<Button name="ПерсональнаяНастройкаПроксиСервера" id="71">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ПерсональнаяНастройкаПроксиСервера</CommandName>
+									<ExtendedTooltip name="ПерсональнаяНастройкаПроксиСервераExtendedTooltip" id="135"/>
+								</Button>
+								<Button name="ЖурналДокументовВзаимодействияНастройкиРаботыСПочтой" id="113">
+									<Type>Hyperlink</Type>
+									<CommandName>DocumentJournal.Взаимодействия.Command.НастройкиРаботыСПочтой</CommandName>
+									<ExtendedTooltip name="ЖурналДокументовВзаимодействияНастройкиРаботыСПочтойExtendedTooltip" id="136"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПрочиеНастройки" id="237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прочее</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПрочиеНастройкиРасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиЭлектроннойПодписиИШифрования" id="222">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ChildItemsWidth>Equal</ChildItemsWidth>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиЭлектроннойПодписиИШифрованияРасширеннаяПодсказка" id="223"/>
+									<ChildItems>
+										<Button name="НастройкиЭлектроннойПодписиИШифрования" id="73">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.НастройкиЭлектроннойПодписиИШифрования</CommandName>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="НастройкиЭлектроннойПодписиИШифрованияРасширеннаяПодсказка" id="173"/>
+										</Button>
+										<Button name="ЗадатьДействиеПриВыбореМакетаПечатнойФормы" id="70">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.ЗадатьДействиеПриВыбореМакетаПечатнойФормы</CommandName>
+											<ExtendedTooltip name="ЗадатьДействиеПриВыбореМакетаПечатнойФормыExtendedTooltip" id="151"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИнтеграцияВызовОнлайнПоддержки" id="233">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ChildItemsWidth>Equal</ChildItemsWidth>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИнтеграцияВызовОнлайнПоддержкиРасширеннаяПодсказка" id="234"/>
+									<ChildItems>
+										<Button name="ОбщаяКомандаНастройкаОнлайнПоддержки" id="235">
+											<Type>Hyperlink</Type>
+											<CommandName>CommonCommand.НастройкаОнлайнПоддержки</CommandName>
+											<ExtendedTooltip name="ОбщаяКомандаНастройкаОнлайнПоддержкиРасширеннаяПодсказка" id="236"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="РаботаСФайлами" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работа с файлами</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="РаботаСФайламиExtendedTooltip" id="152"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройки" id="62">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="156"/>
+							<ChildItems>
+								<InputField name="ДействиеПоДвойномуЩелчкуМыши" id="9">
+									<DataPath>ДействиеПоДвойномуЩелчкуМыши</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действие при выборе файла</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДействиеПоДвойномуЩелчкуМышиКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ДействиеПоДвойномуЩелчкуМышиExtendedTooltip" id="157"/>
+									<Events>
+										<Event name="OnChange">ДействиеПоДвойномуЩелчкуМышиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="СпрашиватьРежимРедактированияПриОткрытииФайла" id="13">
+									<DataPath>СпрашиватьРежимРедактированияПриОткрытииФайла</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запрашивать, как открывать файл: на чтение или для редактирования</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СпрашиватьРежимРедактированияПриОткрытииФайлаКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="СпрашиватьРежимРедактированияПриОткрытииФайлаExtendedTooltip" id="158"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПоказыватьПодсказкиПриРедактированииФайлов" id="11">
+									<DataPath>ПоказыватьПодсказкиПриРедактированииФайлов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать подсказки при редактировании файлов (только веб-клиент)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказыватьПодсказкиПриРедактированииФайловКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ПоказыватьПодсказкиПриРедактированииФайловExtendedTooltip" id="159"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПоказыватьЗанятыеФайлыПриЗавершенииРаботы" id="42">
+									<DataPath>ПоказыватьЗанятыеФайлыПриЗавершенииРаботы</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказыватьЗанятыеФайлыПриЗавершенииРаботыКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ПоказыватьЗанятыеФайлыПриЗавершенииРаботыExtendedTooltip" id="160"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПоказыватьКолонкуРазмер" id="44">
+									<DataPath>ПоказыватьКолонкуРазмер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать колонку "Размер" в списках файлов</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать в списках файлов колонку "Размер"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказыватьКолонкуРазмерКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ПоказыватьКолонкуРазмерExtendedTooltip" id="161"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПоказыватьИнформациюЧтоФайлНеБылИзменен" id="94">
+									<DataPath>ПоказыватьИнформациюЧтоФайлНеБылИзменен</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказыватьИнформациюЧтоФайлНеБылИзмененКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ПоказыватьИнформациюЧтоФайлНеБылИзмененExtendedTooltip" id="162"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа12" id="182">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="183"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСравнение" id="48">
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСравнениеExtendedTooltip" id="163"/>
+									<ChildItems>
+										<InputField name="СпособСравненияВерсийФайлов" id="34">
+											<DataPath>СпособСравненияВерсийФайлов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сравнивать версии при помощи</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="СпособСравненияВерсийФайловКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="СпособСравненияВерсийФайловExtendedTooltip" id="164"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияТипыФайлов" id="49">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>(ODT, DOC, RTF, TXT)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияТипыФайловКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ДекорацияТипыФайловExtendedTooltip" id="165"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="НастройкиОткрытияФайлов" id="114">
+									<Representation>List</Representation>
+									<TitleLocation>Top</TitleLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Width>60</Width>
+									<HeightInTableRows>5</HeightInTableRows>
+									<FooterHeight>2</FooterHeight>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>НастройкиОткрытияФайлов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки открытия файлов</v8:content>
+										</v8:item>
+									</Title>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="НастройкиОткрытияФайловКонтекстноеМеню" id="115"/>
+									<AutoCommandBar name="НастройкиОткрытияФайловКоманднаяПанель" id="116">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="НастройкиОткрытияФайловExtendedTooltip" id="166"/>
+									<SearchStringAddition name="НастройкиОткрытияФайловСтрокаПоиска" id="224">
+										<AdditionSource>
+											<Item>НастройкиОткрытияФайлов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиОткрытияФайловСтрокаПоискаКонтекстноеМеню" id="225"/>
+										<ExtendedTooltip name="НастройкиОткрытияФайловСтрокаПоискаРасширеннаяПодсказка" id="226"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="НастройкиОткрытияФайловСостояниеПросмотра" id="227">
+										<AdditionSource>
+											<Item>НастройкиОткрытияФайлов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиОткрытияФайловСостояниеПросмотраКонтекстноеМеню" id="228"/>
+										<ExtendedTooltip name="НастройкиОткрытияФайловСостояниеПросмотраРасширеннаяПодсказка" id="229"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="НастройкиОткрытияФайловУправлениеПоиском" id="230">
+										<AdditionSource>
+											<Item>НастройкиОткрытияФайлов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиОткрытияФайловУправлениеПоискомКонтекстноеМеню" id="231"/>
+										<ExtendedTooltip name="НастройкиОткрытияФайловУправлениеПоискомРасширеннаяПодсказка" id="232"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="НастройкиОткрытияФайловТипФайла" id="117">
+											<DataPath>НастройкиОткрытияФайлов.ТипФайла</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиОткрытияФайловТипФайлаКонтекстноеМеню" id="118"/>
+											<ExtendedTooltip name="НастройкиОткрытияФайловТипФайлаExtendedTooltip" id="167"/>
+										</InputField>
+										<InputField name="НастройкиОткрытияФайловРасширение" id="119">
+											<DataPath>НастройкиОткрытияФайлов.Расширение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиОткрытияФайловРасширениеКонтекстноеМеню" id="120"/>
+											<ExtendedTooltip name="НастройкиОткрытияФайловРасширениеExtendedTooltip" id="168"/>
+										</InputField>
+										<InputField name="НастройкиОткрытияФайловСпособОткрытия" id="121">
+											<DataPath>НастройкиОткрытияФайлов.СпособОткрытия</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиОткрытияФайловСпособОткрытияКонтекстноеМеню" id="122"/>
+											<ExtendedTooltip name="НастройкиОткрытияФайловСпособОткрытияExtendedTooltip" id="169"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Команды" id="15">
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="КомандыExtendedTooltip" id="170"/>
+							<ChildItems>
+								<Button name="НастройкаСканирования" id="51">
+									<Type>Hyperlink</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.НастройкаСканирования</CommandName>
+									<ExtendedTooltip name="НастройкаСканированияExtendedTooltip" id="172"/>
+								</Button>
+								<Button name="НастройкаРабочегоКаталога" id="16">
+									<Type>Hyperlink</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.НастройкаРабочегоКаталога</CommandName>
+									<ExtendedTooltip name="НастройкаРабочегоКаталогаExtendedTooltip" id="171"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДействиеПоДвойномуЩелчкуМыши" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действие по двойному щелчку мыши</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ДействияСФайламиПоДвойномуЩелчку</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПоказыватьПодсказкиПриРедактированииФайлов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать подсказки при редактировании файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СпрашиватьРежимРедактированияПриОткрытииФайла" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор режима открытия файла при двойном щелчке мыши</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СпособСравненияВерсийФайлов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ сравнения версий файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СпособыСравненияВерсийФайлов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьПредупреждениеПриРегистрации" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьЗанятыеФайлыПриЗавершенииРаботы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать занятые файлы при завершении работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПоказыватьКолонкуРазмер" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать колонку размер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АвторизованныйПользователь" id="4">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапрашиватьПодтверждениеПриЗавершенииПрограммы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрашивать подтверждение при завершении программы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПоказыватьИнформациюЧтоФайлНеБылИзменен" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать информацию, что файл не был изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НастройкиОткрытияФайлов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки открытия файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТипФайла" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыФайловДляВстроенногоРедактора</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Расширение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособОткрытия" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ открытия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СпособыОткрытияФайлаНаПросмотр</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПоказыватьОписаниеИзмененийСистемы" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НапоминатьОбУстановкеРасширенияРаботыСФайлами" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напоминать об установке расширения для веб-клиента 1С:Предприятие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПредлагатьПерейтиНаСайтПриЗапуске" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Демо: Предлагать перейти на сайт при запуске</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗначениеРабочейДаты" id="15">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьТекущуюДатуКомпьютера" id="16">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьПредупреждениеОбУстановленныхОбновленияхПрограммы" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать предупреждение об установленных обновлениях программы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаРабочегоКаталога" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка рабочего каталога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка основного рабочего каталога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаРабочегоКаталога</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьРасширениеРаботыСФайламиНаКлиенте" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить расширение для работы с 1С:Предприятием</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьРасширениеРаботыСФайламиНаКлиенте</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаСканирования" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка сканирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка сканирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаСканирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СведенияОПользователе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о пользователе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести контактную информацию, посмотреть параметры для входа в программу и права доступа, сменить пароль.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СведенияОПользователе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗадатьДействиеПриВыбореМакетаПечатнойФормы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задать действие при выборе макета печатной формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задать действие при выборе макета печатной формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗадатьДействиеПриВыбореМакетаПечатнойФормы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПерсональнаяНастройкаПроксиСервера" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить доступ к Интернету</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Персональная настройка прокси сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерсональнаяНастройкаПроксиСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкиЭлектроннойПодписиИШифрования" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки электронной подписи и шифрования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для подписания и шифрования данных на этом компьютере требуется
+установка сертификатов и специальной программы.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиЭлектроннойПодписиИШифрования</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьЭлектронныеПодписи</Item>
+				<Item>FunctionalOption.ИспользоватьШифрование</Item>
+			</FunctionalOptions>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CreateInitialImage</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>ReadChanges</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>ShowInList</ExcludedCommand>
+		<ExcludedCommand>WriteChanges</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="52"/>
+		</InputField>
+		<UsualGroup name="НастройкаФильтровРегистрации" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила синхронизации данных</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="НастройкаФильтровРегистрацииExtendedTooltip" id="55"/>
+			<ChildItems>
+				<InputField name="ДатаНачалаВыгрузкиДокументов" id="9">
+					<DataPath>Объект.ДатаНачалаВыгрузкиДокументов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизировать документы, начиная с даты</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаНачалаВыгрузкиДокументовКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДатаНачалаВыгрузкиДокументовExtendedTooltip" id="56"/>
+				</InputField>
+				<UsualGroup name="ГруппаФлаговИспользованияОтборов" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгружать данные только в разрезе указанных объектов</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаФлаговИспользованияОтборовExtendedTooltip" id="57"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьОтборПоОрганизациям" id="11">
+							<DataPath>Объект.ИспользоватьОтборПоОрганизациям</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организаций</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьОтборПоОрганизациямКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ИспользоватьОтборПоОрганизациямExtendedTooltip" id="58"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьОтборПоСкладам" id="13">
+							<DataPath>Объект.ИспользоватьОтборПоСкладам</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Складов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьОтборПоСкладамКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ИспользоватьОтборПоСкладамExtendedTooltip" id="59"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьОтборПоПодразделениям" id="15">
+							<DataPath>Объект.ИспользоватьОтборПоПодразделениям</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделений</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьОтборПоПодразделениямКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ИспользоватьОтборПоПодразделениямExtendedTooltip" id="60"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="ТабличныеЧасти" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Табличные части</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="ТабличныеЧастиExtendedTooltip" id="61"/>
+					<ChildItems>
+						<Page name="СтраницаОрганизации" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организации</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СтраницаОрганизацииExtendedTooltip" id="62"/>
+							<ChildItems>
+								<Table name="Организации" id="27">
+									<SkipOnInput>false</SkipOnInput>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Организации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организации</v8:content>
+										</v8:item>
+									</Title>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ОрганизацииКонтекстноеМеню" id="28"/>
+									<AutoCommandBar name="ОрганизацииКоманднаяПанель" id="29"/>
+									<ExtendedTooltip name="ОрганизацииExtendedTooltip" id="63"/>
+									<SearchStringAddition name="ОрганизацииСтрокаПоиска" id="79">
+										<AdditionSource>
+											<Item>Организации</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОрганизацииСтрокаПоискаКонтекстноеМеню" id="80"/>
+										<ExtendedTooltip name="ОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ОрганизацииСостояниеПросмотра" id="82">
+										<AdditionSource>
+											<Item>Организации</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОрганизацииСостояниеПросмотраКонтекстноеМеню" id="83"/>
+										<ExtendedTooltip name="ОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ОрганизацииУправлениеПоиском" id="85">
+										<AdditionSource>
+											<Item>Организации</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ОрганизацииУправлениеПоискомКонтекстноеМеню" id="86"/>
+										<ExtendedTooltip name="ОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ОрганизацииНомерСтроки" id="30">
+											<DataPath>Объект.Организации.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОрганизацииНомерСтрокиКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ОрганизацииНомерСтрокиExtendedTooltip" id="64"/>
+										</LabelField>
+										<InputField name="ОрганизацииОрганизация" id="32">
+											<DataPath>Объект.Организации.Организация</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОрганизацииОрганизацияКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ОрганизацииОрганизацияExtendedTooltip" id="65"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаСклады" id="25">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Склады</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СтраницаСкладыExtendedTooltip" id="66"/>
+							<ChildItems>
+								<Table name="Склады" id="34">
+									<SkipOnInput>false</SkipOnInput>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Склады</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Склады</v8:content>
+										</v8:item>
+									</Title>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СкладыКонтекстноеМеню" id="35"/>
+									<AutoCommandBar name="СкладыКоманднаяПанель" id="36"/>
+									<ExtendedTooltip name="СкладыExtendedTooltip" id="67"/>
+									<SearchStringAddition name="СкладыСтрокаПоиска" id="88">
+										<AdditionSource>
+											<Item>Склады</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СкладыСтрокаПоискаКонтекстноеМеню" id="89"/>
+										<ExtendedTooltip name="СкладыСтрокаПоискаРасширеннаяПодсказка" id="90"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СкладыСостояниеПросмотра" id="91">
+										<AdditionSource>
+											<Item>Склады</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СкладыСостояниеПросмотраКонтекстноеМеню" id="92"/>
+										<ExtendedTooltip name="СкладыСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СкладыУправлениеПоиском" id="94">
+										<AdditionSource>
+											<Item>Склады</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СкладыУправлениеПоискомКонтекстноеМеню" id="95"/>
+										<ExtendedTooltip name="СкладыУправлениеПоискомРасширеннаяПодсказка" id="96"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="СкладыНомерСтроки" id="37">
+											<DataPath>Объект.Склады.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СкладыНомерСтрокиКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="СкладыНомерСтрокиExtendedTooltip" id="68"/>
+										</LabelField>
+										<InputField name="СкладыСкладОтправитель" id="39">
+											<DataPath>Объект.Склады.СкладОтправитель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СкладыСкладОтправительКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="СкладыСкладОтправительExtendedTooltip" id="69"/>
+										</InputField>
+										<InputField name="СкладыСкладПолучатель" id="41">
+											<DataPath>Объект.Склады.СкладПолучатель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СкладыСкладПолучательКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="СкладыСкладПолучательExtendedTooltip" id="70"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаПодразделения" id="26">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделения</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СтраницаПодразделенияExtendedTooltip" id="71"/>
+							<ChildItems>
+								<Table name="Подразделения" id="43">
+									<SkipOnInput>false</SkipOnInput>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Подразделения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подразделения</v8:content>
+										</v8:item>
+									</Title>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ПодразделенияКонтекстноеМеню" id="44"/>
+									<AutoCommandBar name="ПодразделенияКоманднаяПанель" id="45"/>
+									<ExtendedTooltip name="ПодразделенияExtendedTooltip" id="72"/>
+									<SearchStringAddition name="ПодразделенияСтрокаПоиска" id="97">
+										<AdditionSource>
+											<Item>Подразделения</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПодразделенияСтрокаПоискаКонтекстноеМеню" id="98"/>
+										<ExtendedTooltip name="ПодразделенияСтрокаПоискаРасширеннаяПодсказка" id="99"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПодразделенияСостояниеПросмотра" id="100">
+										<AdditionSource>
+											<Item>Подразделения</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПодразделенияСостояниеПросмотраКонтекстноеМеню" id="101"/>
+										<ExtendedTooltip name="ПодразделенияСостояниеПросмотраРасширеннаяПодсказка" id="102"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПодразделенияУправлениеПоиском" id="103">
+										<AdditionSource>
+											<Item>Подразделения</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПодразделенияУправлениеПоискомКонтекстноеМеню" id="104"/>
+										<ExtendedTooltip name="ПодразделенияУправлениеПоискомРасширеннаяПодсказка" id="105"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ПодразделенияНомерСтроки" id="46">
+											<DataPath>Объект.Подразделения.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодразделенияНомерСтрокиКонтекстноеМеню" id="47"/>
+											<ExtendedTooltip name="ПодразделенияНомерСтрокиExtendedTooltip" id="73"/>
+										</LabelField>
+										<InputField name="ПодразделенияПодразделение" id="48">
+											<DataPath>Объект.Подразделения.Подразделение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодразделенияПодразделениеКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ПодразделенияПодразделениеExtendedTooltip" id="74"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Служебные" id="18">
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебная информация</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="СлужебныеРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>2</Width>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="53"/>
+				</InputField>
+				<UsualGroup name="НомераСообщений" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номера сообщений</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="НомераСообщенийExtendedTooltip" id="76"/>
+					<ChildItems>
+						<InputField name="НомерПринятого" id="7">
+							<DataPath>Объект.ReceivedNo</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>5</Width>
+							<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НомерПринятогоExtendedTooltip" id="77"/>
+						</InputField>
+						<InputField name="НомерОтправленного" id="5">
+							<DataPath>Объект.SentNo</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>5</Width>
+							<ContextMenu name="НомерОтправленногоКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НомерОтправленногоExtendedTooltip" id="78"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject._ДемоОбменВРаспределеннойИнформационнойБазе</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.СозданиеНачальногоОбразаСФайлами</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

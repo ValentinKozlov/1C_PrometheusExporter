@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Subsystem uuid="4ded515b-a3b6-4292-8d6b-66c439e2bb88">
+		<Properties>
+			<Name>_ДемоБазоваяФункциональность</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовая функциональность</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._ДемоВыводСообщенийПользователю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule._ДемоСтандартныеПодсистемы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._ДемоСписаниеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CalculationRegister._ДемоОсновныеНачисления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister._ДемоГрафикиРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister._ДемоОсновной</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._ДемоВыборОбъектовМетаданных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._ДемоШаблонПомощника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule._ДемоСтандартныеПодсистемыСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription._ДемоЗаполнитьДатуДокументаПоРабочейДате</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription._ДемоЗаполнитьДатуДокументаПоРабочейДатеПриКопировании</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule._ДемоСтандартныеПодсистемыКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._ДемоДлительнаяОперация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter._ДемоТекущийПроект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule._ДемоСтандартныеПодсистемыВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Подсистема_ДемоАдминистрирование</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

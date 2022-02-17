@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="_ДемоИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистем" id="9">
+			<DataPath>НаборКонстант._ДемоИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистем</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя конфигурации для настройки синхронизации данных с этой же конфигурацией</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="_ДемоИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистемКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="_ДемоИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистемExtendedTooltip" id="11"/>
+			<Events>
+				<Event name="OnChange">_ДемоИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистемПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelDecoration name="ПояснениеИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистем" id="12">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для настройки синхронизации данных в модели сервиса между двумя приложениями одной конфигурации "Демонстрационная конфигурация "Библиотека стандартных подсистем" необходимо задать различающиеся имена конфигураций в обоих приложениях. Например, "БСП1" и "БСП2". После изменения значения константы необходимо перейти в менеджер сервиса, открыть форму текущей информационной базы и нажать "Записать и закрыть".</v8:content>
+				</v8:item>
+			</Title>
+			<TitleHeight>4</TitleHeight>
+			<ContextMenu name="ПояснениеИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистемКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ПояснениеИмяКонфигурацииВОбменеСБиблиотекойСтандартныхПодсистемРасширеннаяПодсказка" id="14"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

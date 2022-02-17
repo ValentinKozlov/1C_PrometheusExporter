@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Subsystem uuid="3749f843-9db1-45d8-98c5-3274a7742a6f">
+		<Properties>
+			<Name>ЭлектроннаяПодписьВМоделиСервиса</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронная подпись в модели сервиса</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ХранилищеСертификатов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипХранилищаСертификатов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЭлектроннуюПодписьВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресСервисаПодключенияЭлектроннойПодписиВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресКриптосервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗагрузитьФайлСертификата</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВыгрузитьФайлСертификата</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВводВременногоПароля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЭлектроннуюПодписьВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.МаркерыБезопасности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектроннаяПодписьВМоделиСервисаКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектроннаяПодписьВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ХранилищеСертификатовСлужебныйКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ХранилищеСертификатовКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ХранилищеСертификатовСлужебныйВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ХранилищеСертификатов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СервисКриптографииСлужебныйКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СервисКриптографииСлужебныйВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СервисКриптографииСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СервисКриптографииКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СервисКриптографии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеЭлектроннойПодписиВМоделиСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкиПолученияВременныхПаролей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ИзменениеНомераТелефона</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектроннаяПодписьВМоделиСервисаКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МенеджерСервисаКриптографии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектроннаяПодписьВМоделиСервисаПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВводВременногоПароляМобильноеПриложение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ОтключениеПодтвержденияКриптоопераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкаПодтвержденияКриптоопераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыПодтвержденияКриптоопераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МенеджерСервисаКриптографииСлужебныйКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МенеджерСервисаКриптографииСлужебныйВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МенеджерСервисаКриптографииКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭлектроннаяПодписьВМоделиСервисаСлужебный</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>
