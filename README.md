@@ -39,4 +39,6 @@
 
 Всем удачи!
 
+PS: На Инфостарте опубликована статья по данной теме: https://infostart.ru/1c/articles/1606108/
+
 >>>>>>> dd3bc01cddb985a0eb45f0b615aeb6a0b5fcdac5
