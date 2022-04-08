@@ -20,3 +20,4 @@ summary_test{label="scrape_summary"} 35
 counter_test{label="scrape_counter"} 100
 
 ' | curl --data-binary @- http://localhost:9091/metrics/job/1c/instance/1c_bit
+ ad
